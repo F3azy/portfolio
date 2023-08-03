@@ -7,7 +7,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Sidebar />
-      <Box>
+      <Box m={{base: "48px 0", md: "0 0 0 72px"}} border={"1px solid red"}>
         <Hero />
         <About />
         <Tech />
