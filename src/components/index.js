@@ -4,9 +4,11 @@ import About from './About';
 import Tech from './Tech';
 import Projects from './Projects';
 import Contact from './Contact';
+import MobileNav from './MobileNav';
 
 export {
     Sidebar, 
+    MobileNav,
     Hero, 
     About, 
     Tech, 

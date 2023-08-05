@@ -3,7 +3,7 @@ import React from 'react';
 
 const SocialLink = ({icon, url}) => {
   return (
-    <Box p="0 12px" position="relative">
+    <Box p={{base: "0", lg: "0 12px"}} position="relative">
         <Link href={url} isExternal>
             <Center 
             color="brand.primary" 

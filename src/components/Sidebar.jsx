@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Spacer } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { navLinks, socialLinks } from '../constants';
 import NavItem from './NavItem';
 import SocialLink from './SocialLink';
@@ -7,7 +7,16 @@ import SocialLink from './SocialLink';
 
 const Sidebar = () => {
   return (
-    <Flex h="full" direction="column" justify="space-between" bg="brand.dark.900" p="12px 0" position="fixed" display={{base: "none", lg: "flex"}}>
+    <Flex 
+    h="full" 
+    direction="column" 
+    justify="space-between" 
+    bg="brand.dark.900" 
+    p="12px 0" 
+    position="fixed" 
+    left="0" 
+    display={{base: "none", lg: "flex"}}
+    >
       <Flex as="nav" direction="column" rowGap="12px">
         {navLinks.map((navLink) => 
           <NavItem 

@@ -1,4 +1,4 @@
-import { Box, Center, Icon, Tooltip } from '@chakra-ui/react';
+import { Box, Center, Icon, Text, Tooltip } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
 const NavItem = ({id, title, icon}) => {
@@ -6,8 +6,8 @@ const NavItem = ({id, title, icon}) => {
 
 
   return (
-      <Box p="0 12px" position="relative">
-        <Center>
+      <Box p={{base: "0", lg: "0 12px"}} position="relative">
+        <Center justifyContent={{base: "flex-start", lg: "center"}} columnGap="12px">
             <Tooltip 
             hasArrow 
             label={`${title}`} 
@@ -38,6 +38,14 @@ const NavItem = ({id, title, icon}) => {
                     <Icon as={icon} boxSize={8}/>
                 </Center>
             </Tooltip>
+            <Text 
+            display={{base: "block", lg: "none"}} 
+            fontSize="20px"
+            fontWeight="bold"
+            color="brand.primary"
+            >
+                {title}
+            </Text>
             <Box 
             w="8px" 
             h={isHovering ? "20px" : "8px"} 
@@ -46,6 +54,7 @@ const NavItem = ({id, title, icon}) => {
             position="absolute" 
             left="-1" 
             transition="height 0.15s linear"
+            display={{base: "none", lg: "block"}}
             />
         </Center>
     </Box>
