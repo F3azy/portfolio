@@ -27,6 +27,7 @@ const MobileNav = () => {
     p="0 16px" 
     position="fixed" 
     top="0" 
+    zIndex={10}
     display={{base: "flex", lg: "none"}}
     >
       <IconButton 
@@ -71,7 +72,11 @@ const MobileNav = () => {
                     </Flex>
                     <Flex justifyContent="center" columnGap="40px">
                         {socialLinks.map((socialLink) => 
-                        <SocialLink key={socialLink.id} icon={socialLink.icon} url={socialLink.url} />
+                        <SocialLink 
+                        key={socialLink.id} 
+                        icon={socialLink.icon} 
+                        url={socialLink.url} 
+                        />
                         )}
                     </Flex>
                 </Flex>

@@ -15,6 +15,7 @@ const Sidebar = () => {
     p="12px 0" 
     position="fixed" 
     left="0" 
+    zIndex={10}
     display={{base: "none", lg: "flex"}}
     >
       <Flex as="nav" direction="column" rowGap="12px">
@@ -29,7 +30,11 @@ const Sidebar = () => {
       </Flex>
       <Flex direction="column" rowGap="12px">
         {socialLinks.map((socialLink) => 
-          <SocialLink key={socialLink.id} icon={socialLink.icon} url={socialLink.url} />
+          <SocialLink 
+          key={socialLink.id} 
+          icon={socialLink.icon} 
+          url={socialLink.url} 
+          />
         )}
       </Flex>
     </Flex>
