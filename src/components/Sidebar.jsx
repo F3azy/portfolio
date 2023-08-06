@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex } from '@chakra-ui/react';
 import { navLinks, socialLinks } from '../constants';
 import NavItem from './NavItem';

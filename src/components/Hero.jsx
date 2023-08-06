@@ -1,6 +1,5 @@
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
 import { HeroBG, HeroAnimation } from '../assets';
-import React from 'react';
 import Lottie from 'react-lottie';
 
 const Hero = () => {
@@ -22,8 +21,8 @@ const Hero = () => {
     <Flex 
     direction="column"
     h={{lg: "100vh"}} 
-    p={{base: "44px 16px", lg: "88px 188px"}} 
-    position={{base: "static", lg:"relative"}} 
+    p={"44px 16px"} 
+    position={{base: "static", lg:"relative"}}
     bgImage={HeroBG} 
     bgRepeat="no-repeat" 
     bgPosition="bottom" 
@@ -61,7 +60,8 @@ const Hero = () => {
         </Box>
       </Flex>
       <Box 
-      boxSize={{lg:"800px"}}
+      m={{base: "-100px auto 0", md: "-120px auto 0"}}
+      boxSize={{md:"500px", lg:"800px"}}
       position={{base: "static", lg:"absolute"}} 
       bottom="0" 
       right={{base: "0",lg: "188px"}}

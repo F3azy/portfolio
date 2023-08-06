@@ -1,5 +1,5 @@
 import { Box, Center, Icon, Text, Tooltip } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const NavItem = ({id, title, icon}) => {
     const [isHovering, setIsHovering] = useState(false);
