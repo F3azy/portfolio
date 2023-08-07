@@ -21,7 +21,7 @@ const MobileNav = () => {
     <Flex 
     w="full" 
     h="48px" 
-    alignItems="center" 
+    align="center" 
     bg="brand.dark.900" 
     p="0 16px" 
     position="fixed" 
@@ -69,7 +69,7 @@ const MobileNav = () => {
                         />
                         )}
                     </Flex>
-                    <Flex justifyContent="center" columnGap="40px">
+                    <Flex mt="40px" justifyContent="center" columnGap="40px">
                         {socialLinks.map((socialLink) => 
                         <SocialLink 
                         key={socialLink.id} 

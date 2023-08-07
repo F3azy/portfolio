@@ -34,7 +34,7 @@ const Hero = () => {
       top={{base: "44px", lg: "88px"}} 
       left={{lg: "188px"}}
       >
-        <Flex direction="column" alignItems="center">
+        <Flex direction="column" align="center">
           <Box boxSize="20px" bg="brand.tertiary" borderRadius="full" />
           <Box w="2px" h={{base: "200px", lg: "300px"}} bg="brand.tertiary" />
         </Flex>

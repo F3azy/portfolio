@@ -1,7 +1,5 @@
 import {
     FrontEndIcon,
-    HeroAnimation,
-    HeroBG
 } from '../assets';
 
 import {
@@ -77,3 +75,10 @@ export const sections = new Map([
         description: "",
     }]
 ]);
+
+export const proffesions = [
+    {
+        name: "Front-end Developer",
+        icon: FrontEndIcon
+    },
+]
