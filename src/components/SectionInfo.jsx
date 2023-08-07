@@ -18,6 +18,7 @@ const SectionInfo = ({infos}) => {
         {infos.title}
       </Heading>
       <Text 
+      w={{lg: "75%"}}
       fontSize="18px" 
       lineHeight="24px"
       color="brand.gray"
