@@ -16,6 +16,7 @@ const ProffessionCard = ({name, icon}) => {
     borderColor="brand.primary" 
     borderRadius="16px"
     p="48px 28px"
+    boxShadow="0 0 36px 1.8px #FF000050"
     >
       <CardBody p="0">
         <VStack rowGap="16px">
