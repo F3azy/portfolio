@@ -1,6 +1,7 @@
-import { Card, CardBody, Flex, Grid, GridItem, Icon, VStack, Text } from '@chakra-ui/react';
+import { Flex, Grid, GridItem } from '@chakra-ui/react';
 import { proffesions, sections } from '../constants';
 import SectionInfo from './SectionInfo';
+import ProffessionCard from './ProffessionCard';
 
 const About = () => {
   return (
@@ -17,30 +18,8 @@ const About = () => {
       gap="40px"
       >
       {proffesions.map((proffesion) => 
-          <GridItem>
-            <Card 
-            key={proffesion.name}
-            bg="brand.dark.800" 
-            border="1px solid" 
-            borderColor="brand.primary" 
-            borderRadius="16px"
-            p="48px 28px"
-            >
-              <CardBody p="0">
-                <VStack rowGap="16px">
-                  {<Icon boxSize="70%" as={proffesion.icon} />}
-                  <Text 
-                  color="brand.white"
-                  fontSize="32px"
-                  fontWeight="bold"
-                  textAlign="center"
-                  letterSpacing="2px"
-                  >
-                    {proffesion.name}
-                  </Text>
-                </VStack>
-              </CardBody>
-            </Card>
+          <GridItem  key={proffesion.name}>
+            <ProffessionCard name={proffesion.name} icon={proffesion.icon} />
           </GridItem>
       )}
       </Grid>
