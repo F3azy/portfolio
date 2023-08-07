@@ -1,6 +1,7 @@
-import { Flex, Text } from '@chakra-ui/react';
-import { sections } from '../constants';
+import { Flex } from '@chakra-ui/react';
+import { sections, iconsCloud, cloudOptions } from '../constants';
 import SectionInfo from './SectionInfo';
+import { Cloud } from "react-icon-cloud";
 
 const Tech = () => {
   return (
@@ -12,6 +13,11 @@ const Tech = () => {
     p={{base: "44px 0", lg: "88px 0"}} 
     >
       <SectionInfo infos={sections.get("tech")} />
+      <Flex justify="center">
+        <Cloud options={cloudOptions}>
+          {iconsCloud}
+        </Cloud>
+      </Flex>
     </Flex>
   )
 };
