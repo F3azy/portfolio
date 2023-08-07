@@ -1,21 +1,8 @@
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
 import { HeroBG, HeroAnimation } from '../assets';
-import Lottie from 'react-lottie';
+import Lottie from 'react-lottie-player';
 
 const Hero = () => {
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: HeroAnimation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
-
-  const style = {
-    cursor: "auto",
-  };
 
   return (
     <Flex 
@@ -66,7 +53,7 @@ const Hero = () => {
       bottom="0" 
       right={{base: "0",lg: "188px"}}
       >
-        <Lottie options={defaultOptions} style={style} isClickToPauseDisabled />
+        <Lottie animationData={HeroAnimation} loop play />
       </Box>
     </Flex>
   )
