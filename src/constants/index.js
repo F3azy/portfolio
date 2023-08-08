@@ -77,7 +77,7 @@ export const sections = new Map([
         title: "PROJECTS",
         description: "Check out my projects, showcasing my creativity, responsive designs, and use of modern technologies. These works reflect my dedication to learning and growing in web development. I'm excited to explore new collaborations and demonstrate my potential in future projects.",
     }],
-    ["message", {
+    ["contact", {
         subTitle: "GET IN TOUCH",
         title: "CONTACT",
         description: "",
