@@ -1,7 +1,10 @@
 import { siBlender, siBootstrap, siChakraui, siCplusplus, siCsharp, siCss3, siFigma, siGit, siGithub, siHtml5, siJavascript, siMysql, siNpm, siPhp, siPython, siReact, siTypescript, siUnity, siVisualstudio, siYarn } from 'simple-icons';
 
 import {
-    FrontEndIcon,
+    FrontEndIcon, 
+    movieInfo, 
+    pokeInfo, 
+    portfolio,
 } from '../assets';
 
 import { renderSimpleIcon } from 'react-icon-cloud'
@@ -130,4 +133,58 @@ export const cloudOptions = {
     tooltip: "native",
     tooltipDelay: 0,
     wheelZoom: false
-  }
+}
+
+export const projects = [
+    {
+        title: "Francesco Carvelli",
+        image: portfolio,
+        githubUrl: "https://github.com/F3azy/portfolio",
+        url: "",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        tags: [
+            {
+                name: "react",
+                color: "#61DBFB",
+            },
+            {
+                name: "chakraui",
+                color: "#60CACB",
+            }
+        ]
+    },
+    {
+        title: "Movie Info",
+        image: movieInfo,
+        githubUrl: "https://github.com/F3azy/movieInfo",
+        url: "https://f3azy.github.io/movieInfo/",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        tags: [
+            {
+                name: "react",
+                color: "#61DBFB",
+            },
+            {
+                name: "chakraui",
+                color: "#60CACB",
+            }
+        ]
+    },
+    {
+        title: "Poke Info",
+        image: pokeInfo,
+        githubUrl: "https://github.com/F3azy/pokeInfo",
+        url: "https://f3azy.github.io/pokeInfo/",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        tags: [
+            {
+                name: "react",
+                color: "#61DBFB",
+            },
+            {
+                name: "chakraui",
+                color: "#60CACB",
+            }
+        ]
+    },
+];

@@ -34,6 +34,6 @@ const ProffessionCard = ({name, icon}) => {
       </CardBody>
     </Card>
   )
-}
+};
 
-export default ProffessionCard
+export default ProffessionCard;
