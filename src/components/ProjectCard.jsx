@@ -31,6 +31,8 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags}) => {
                 >
                 <Icon 
                 color="#171515"
+                bg="brand.white"
+                borderRadius="full"
                 // color="brand.secondary"
                 boxSize={10}
                 as={BiLogoGithub} 
@@ -55,7 +57,7 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags}) => {
             </Heading>
             <Text 
             color="brand.gray"
-            fontSize="16px"
+            fontSize={{base: "14px", '2xl': "16px"}}
             fontWeight="bold"
             letterSpacing="2px"
             >
@@ -71,7 +73,7 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags}) => {
                 <Text 
                 key={tag.name}
                 color={tag.color}
-                fontSize="16px"
+                fontSize={{base: "14px", '2xl': "16px"}}
                 fontWeight="bold"
                 letterSpacing="2px"
                 >

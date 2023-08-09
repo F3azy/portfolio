@@ -1,9 +1,25 @@
 import { Box, Center, Icon, Text, Tooltip } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useState, useLayoutEffect } from 'react';
 
 const NavItem = ({id, title, icon}) => {
     const [isHovering, setIsHovering] = useState(false);
+    const [isLargerThan992, setIsLargerThan992] = useState(false);
 
+    useLayoutEffect (() => {
+        function handleResize() {
+          if(window.innerWidth > 992) setIsLargerThan992(true);
+          else setIsLargerThan992(false);
+        }
+    
+        window.addEventListener("resize", handleResize);
+        
+        handleResize();
+    
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+    
+      }, []);
 
   return (
       <Box p={{base: "0", lg: "0 12px"}} position="relative">
@@ -18,10 +34,12 @@ const NavItem = ({id, title, icon}) => {
             p="4px 12px"
             fontSize="20px"
             borderRadius="6px"
+            isDisabled={!isLargerThan992}
             >
                 <Center 
-                w="48px" 
-                h="48px" 
+                boxSize={{base: "48px", md: "60px", lg: "48px"}}
+                // w="48px" 
+                // h="48px" 
                 bg="brand.dark.700" 
                 borderRadius="24px" 
                 color="brand.primary"
@@ -35,12 +53,12 @@ const NavItem = ({id, title, icon}) => {
                 onMouseEnter={()=> setIsHovering(true)} 
                 onMouseLeave={() => setIsHovering(false)}
                 >
-                    <Icon as={icon} boxSize={8}/>
+                    <Icon as={icon} boxSize={{base: 8, md: 10, lg: 8}}/>
                 </Center>
             </Tooltip>
             <Text 
             display={{base: "block", lg: "none"}} 
-            fontSize="20px"
+            fontSize={{base: "20px", md: "28px"}}
             fontWeight="bold"
             color="brand.primary"
             >

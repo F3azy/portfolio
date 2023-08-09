@@ -9,9 +9,9 @@ function App() {
     <ChakraProvider theme={theme}>
       <Sidebar />
       <MobileNav />
-      <Box m={{base: "48px 0 0", lg: "0 0 0 72px"}}>
+      <Box m={{base: "48px 0 0", md: "60px 0 0", lg: "0 0 0 72px"}}>
         <Hero />
-        <Box p={{base: "0 16px", lg: "0 188px"}}>
+        <Box p={{base: "0 16px", lg: "0 94px", xl: "0 188px" ,'2xl': "0 360px"}}>
           <About />
           <Tech />
           <Projects />

@@ -14,10 +14,10 @@ const Contact = () => {
   return (
     <Flex 
     direction="column"
-    rowGap={{base: "44px", lg: "0"}}
-    justify="space-evenly"
-    h={{lg: "100vh"}} 
-    p={{base: "44px 0", lg: "88px 0"}} 
+    rowGap={{base: "44px", xl: "88px"}}
+    justify="center"
+    minH={{lg: "100vh"}} 
+    p={{base: "44px 0", xl: "88px 0"}} 
     >
       <Flex 
       direction="column"

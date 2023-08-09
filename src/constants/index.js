@@ -1,4 +1,4 @@
-import { siBlender, siBootstrap, siChakraui, siCplusplus, siCsharp, siCss3, siFigma, siGit, siGithub, siHtml5, siJavascript, siMysql, siNpm, siPhp, siPython, siReact, siTypescript, siUnity, siVisualstudio, siYarn } from 'simple-icons';
+import { siBlender, siBootstrap, siChakraui, siCplusplus, siCsharp, siCss3, siFigma, siGit, siGithub, siHtml5, siJavascript, siMysql, siNpm, siPhp, siPython, siReact, siTypescript, siUnity, siVisualstudio, siVisualstudiocode, siYarn } from 'simple-icons';
 
 import {
     FrontEndIcon, 
@@ -106,7 +106,7 @@ const icons = [
     siCsharp,
     siBootstrap,
     siChakraui,
-    siVisualstudio,
+    siVisualstudiocode,
     siPhp,
     siBlender,
     siUnity,
@@ -137,7 +137,7 @@ export const cloudOptions = {
 
 export const projects = [
     {
-        title: "Francesco Carvelli",
+        title: "FCarvelli",
         image: portfolio,
         githubUrl: "https://github.com/F3azy/portfolio",
         url: "",

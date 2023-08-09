@@ -15,15 +15,15 @@ const ProffessionCard = ({name, icon}) => {
     border="1px solid" 
     borderColor="brand.primary" 
     borderRadius="16px"
-    p="48px 28px"
-    boxShadow="0 0 36px 1.8px #FF000050"
+    p={{base: "32px 96px", lg: "32px 28px"}}
+    boxShadow="0 0 36px 1.8px #FF000055"
     >
       <CardBody p="0">
         <VStack rowGap="16px">
           {<Icon boxSize="70%" as={icon} />}
           <Text 
           color="brand.white"
-          fontSize="32px"
+          fontSize={{base: "18px", '2xl': "24px"}}
           fontWeight="bold"
           textAlign="center"
           letterSpacing="2px"

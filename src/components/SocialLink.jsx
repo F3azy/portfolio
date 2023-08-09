@@ -13,7 +13,7 @@ const SocialLink = ({icon, url}) => {
                 transform: "scale(1.2)",
             }}
             >
-                <Icon as={icon} boxSize="48px"/>
+                <Icon as={icon} boxSize={{base: "48px", md: "60px", lg: "48px"}}/>
             </Center>
         </Link>
     </Box>
