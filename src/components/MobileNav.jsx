@@ -16,7 +16,7 @@ import NavItem from './NavItem';
 import SocialLink from './SocialLink';
 import { useLayoutEffect } from 'react';
 
-const MobileNav = () => {
+const MobileNav = ({active, setActive}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     useLayoutEffect (() => {
@@ -87,6 +87,8 @@ const MobileNav = () => {
                         id={navLink.id} 
                         title={navLink.title} 
                         icon={navLink.icon} 
+                        active={active} 
+                        setActive={setActive}
                         />
                         )}
                     </Flex>

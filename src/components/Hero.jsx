@@ -6,9 +6,10 @@ const Hero = () => {
 
   return (
     <Flex 
+    id="hero"
     direction="column"
     minH={{lg: "100vh"}} 
-    p={{base: "44px 16px", lg: "44px 94px"}} 
+    p={{base: "48px 16px", lg: "48px 94px"}} 
     position={{base: "static", xl:"relative"}}
     bgImage={HeroBG} 
     bgRepeat="no-repeat" 

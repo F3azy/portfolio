@@ -3,8 +3,7 @@ import { navLinks, socialLinks } from '../constants';
 import NavItem from './NavItem';
 import SocialLink from './SocialLink';
 
-
-const Sidebar = () => {
+const Sidebar = ({active, setActive}) => {
   return (
     <Flex 
     h="full" 
@@ -24,6 +23,8 @@ const Sidebar = () => {
           id={navLink.id} 
           title={navLink.title} 
           icon={navLink.icon} 
+          active={active} 
+          setActive={setActive}
           />
         )}
       </Flex>

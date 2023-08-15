@@ -6,14 +6,15 @@ import { Cloud } from "react-icon-cloud";
 const Tech = () => {
   return (
     <Flex 
+    id="tech"
     direction="column"
     rowGap={{base: "44px", xl: "88px"}}
     justify="center"
     minH={{lg: "100vh"}} 
-    p={{base: "44px 0", xl: "88px 0"}} 
+    p={{base: "48px 0", xl: "88px 0"}} 
     >
       <SectionInfo infos={sections.get("tech")} />
-      <Flex justify="center">
+      <Flex w={{base: "300px", sm: "400px", md: "500px", lg: "auto"}} mx="auto" justify="center">
         <Cloud options={cloudOptions}>
           {iconsCloud}
         </Cloud>

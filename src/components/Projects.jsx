@@ -6,11 +6,12 @@ import ProjectCard from './ProjectCard';
 const Projects = () => {
   return (
     <Flex 
+    id="projects"
     direction="column"
     rowGap={{base: "44px", xl: "88px"}}
     justify="center"
     minH={{lg: "100vh"}} 
-    p={{base: "44px 0", xl: "88px 0"}} 
+    p={{base: "48px 0", xl: "88px 0"}} 
     >
       <SectionInfo infos={sections.get("project")} />
       <Grid 
