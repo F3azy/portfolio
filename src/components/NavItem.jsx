@@ -1,7 +1,7 @@
 import { Box, Center, Icon, Text, Tooltip, Link, textDecoration } from '@chakra-ui/react';
 import { useState, useLayoutEffect } from 'react';
 
-const NavItem = ({id, title, icon, active, setActive}) => {
+const NavItem = ({id, title, icon, active, setActive, onClose}) => {
     const [isHovering, setIsHovering] = useState(false);
     const [isLargerThan992, setIsLargerThan992] = useState(false);
 
@@ -24,7 +24,7 @@ const NavItem = ({id, title, icon, active, setActive}) => {
   return (
       <Box p={{base: "0", lg: "0 12px"}} position="relative">
         <Center>
-            <Center role="group" as={Link} href={`#${id}`} onClick={() => setActive(title)} w={"full"} justifyContent={{base: "flex-start", lg: "center"}} columnGap="12px">
+            <Center role="group" as={Link} href={`#${id}`} onClick={() => {setActive(title); onClose();}} w={"full"} justifyContent={{base: "flex-start", lg: "center"}} columnGap="12px">
               <Tooltip 
               hasArrow 
               label={`${title}`} 

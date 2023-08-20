@@ -38,6 +38,7 @@ const MobileNav = ({active, setActive}) => {
     <Flex 
     w="full" 
     h={{base: "48px", md: "60px"}} 
+    justify="flex-end"
     align="center" 
     bg="brand.dark.900" 
     p="0 16px" 
@@ -62,7 +63,7 @@ const MobileNav = ({active, setActive}) => {
       }}
       />
       <Drawer 
-      placement="left" 
+      placement="right" 
       onClose={onClose} 
       isOpen={isOpen} 
       returnFocusOnClose={false}
@@ -89,6 +90,7 @@ const MobileNav = ({active, setActive}) => {
                         icon={navLink.icon} 
                         active={active} 
                         setActive={setActive}
+                        onClose={onClose}
                         />
                         )}
                     </Flex>
@@ -98,6 +100,7 @@ const MobileNav = ({active, setActive}) => {
                         key={socialLink.id} 
                         icon={socialLink.icon} 
                         url={socialLink.url} 
+                        onClose={onClose}
                         />
                         )}
                     </Flex>
