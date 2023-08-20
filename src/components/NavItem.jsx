@@ -1,7 +1,9 @@
-import { Box, Center, Icon, Text, Tooltip, Link, textDecoration } from '@chakra-ui/react';
+import { Box, Center, Icon, Text, Tooltip, Link } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { useState, useLayoutEffect } from 'react';
+import { fadeInSidebarItems } from "../utils/motion";
 
-const NavItem = ({id, title, icon, active, setActive, onClose}) => {
+const NavItem = ({id, title, icon, active, setActive, onClose, index}) => {
     const [isHovering, setIsHovering] = useState(false);
     const [isLargerThan992, setIsLargerThan992] = useState(false);
 
@@ -22,7 +24,12 @@ const NavItem = ({id, title, icon, active, setActive, onClose}) => {
       }, []);
 
   return (
-      <Box p={{base: "0", lg: "0 12px"}} position="relative">
+      <Box 
+      as={motion.div} 
+      variants={fadeInSidebarItems("right", "spring", index * 0.5, 0.5)}
+      p={{base: "0", lg: "0 12px"}} 
+      position="relative"
+      >
         <Center>
             <Center role="group" as={Link} href={`#${id}`} onClick={() => {setActive(title); onClose();}} w={"full"} justifyContent={{base: "flex-start", lg: "center"}} columnGap="12px">
               <Tooltip 
