@@ -8,13 +8,15 @@ import {
     DrawerCloseButton, 
     Flex, 
     IconButton, 
-    useMediaQuery
+    Image,
+    Link
 } from '@chakra-ui/react';
 import { BiMenu } from 'react-icons/bi';
 import { navLinks, socialLinks } from '../constants';
 import NavItem from './NavItem';
 import SocialLink from './SocialLink';
 import { useLayoutEffect } from 'react';
+import { logo } from '../assets';
 
 const MobileNav = ({active, setActive}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -38,7 +40,7 @@ const MobileNav = ({active, setActive}) => {
     <Flex 
     w="full" 
     h={{base: "48px", md: "60px"}} 
-    justify="flex-end"
+    justify="space-between"
     align="center" 
     bg="brand.dark.900" 
     p="0 16px" 
@@ -47,6 +49,9 @@ const MobileNav = ({active, setActive}) => {
     zIndex={10}
     display={{base: "flex", lg: "none"}}
     >
+      <Link href='#hero'>
+        <Image src={logo} boxSize={10} />
+      </Link>
       <IconButton 
       minW={{base: "30px", md: "40px"}}
       h={{base: "30px", md: "40px"}}
