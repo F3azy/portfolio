@@ -23,6 +23,7 @@ const ProffessionCard = ({name, icon, index}) => {
     borderRadius="16px"
     p={{base: "32px 96px", lg: "32px 28px"}}
     boxShadow="0 0 36px 1.8px #FF000055"
+    height="100%"
     >
       <CardBody p="0">
         <VStack rowGap="16px">

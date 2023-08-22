@@ -25,6 +25,7 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags, index}) =
     bg="brand.dark.600" 
     borderRadius="16px"
     p="12px"
+    height="100%"
     >
       <CardBody p="0">
         <Flex direction="column" rowGap="10px">

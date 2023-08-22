@@ -93,7 +93,7 @@ const Contact = () => {
       as={motion.div}
       initial="hidden"
       whileInView="visible"
-      variants={fadeIn("up", "", 0.1, 1)}      
+      variants={fadeIn("up", "", 0.1, 0.75)}      
       direction="column"
       bg="brand.dark.600"
       borderRadius="16px"

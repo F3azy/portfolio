@@ -141,7 +141,7 @@ export const projects = [
         image: portfolio,
         githubUrl: "https://github.com/F3azy/portfolio",
         url: "",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        description: "",
         tags: [
             {
                 name: "react",
