@@ -9,7 +9,7 @@ import { zoomIn } from '../utils/motion';
 const Tech = () => {
   return (
     <SectionWrapper id="tech" RowGap={{base: "28px", xl: "8px"}}>  
-      <SectionInfo infos={sections.get("tech")} />
+      <SectionInfo infos={sections.get("tech")} animate={true} />
       <Flex 
       as={motion.div}
       initial="hidden"
