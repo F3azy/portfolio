@@ -141,7 +141,7 @@ export const projects = [
         image: portfolio,
         githubUrl: "https://github.com/F3azy/portfolio",
         url: "",
-        description: "",
+        description: "The page you are currently on. It shows my proffesions, technologies and all of my current projects.",
         tags: [
             {
                 name: "react",
@@ -158,7 +158,7 @@ export const projects = [
         image: movieInfo,
         githubUrl: "https://github.com/F3azy/movieInfo",
         url: "https://f3azy.github.io/movieInfo/",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        description: "A small web application made for practice the basics of React and fetching data.",
         tags: [
             {
                 name: "react",
@@ -175,7 +175,7 @@ export const projects = [
         image: pokeInfo,
         githubUrl: "https://github.com/F3azy/pokeInfo",
         url: "https://f3azy.github.io/pokeInfo/",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        description: "My first ever project in React.js. Created to learn and practice the basics of React, fetching data and routing.",
         tags: [
             {
                 name: "react",
@@ -184,6 +184,10 @@ export const projects = [
             {
                 name: "chakraui",
                 color: "#60CACB",
+            },
+            {
+                name: "reactrouter",
+                color: "#f44250",
             }
         ]
     },

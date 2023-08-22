@@ -28,7 +28,7 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags, index}) =
     height="100%"
     >
       <CardBody p="0">
-        <Flex direction="column" rowGap="10px">
+        <Flex direction="column" rowGap="10px" h="full">
             <Box position="relative">
                 <Image src={image} borderRadius="8px" />
                 <Link 
@@ -74,6 +74,7 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags, index}) =
             flexDirection="row" 
             justifyContent="flex-start"
             columnGap="8px"
+            mt="auto"
             >
             {tags.map((tag) => 
                 <Text 

@@ -6,10 +6,10 @@ const SectionInfo = ({infos, animate = false}) => {
   return (
     <Box>
       <Heading 
-      as={animate && motion.h2} 
-      initial={animate && "hidden"}
-      whileInView={animate && "visible"}
-      variants={animate && fadeIn("up", "", 0.1, 0.75)}
+      as={motion.h2} 
+      initial="hidden"
+      whileInView="visible"
+      variants={animate ? fadeIn("up", "", 0.1, 0.75) : {}}
       fontSize={{base: "12px", sm: "14px", md: "16px"}} 
       color="brand.gray"
       letterSpacing="3px"
@@ -17,19 +17,19 @@ const SectionInfo = ({infos, animate = false}) => {
         {infos.subTitle}
       </Heading>
       <Heading 
-      as={animate && motion.h1} 
-      initial={animate && "hidden"}
-      whileInView={animate && "visible"}
-      variants={animate && fadeIn("up", "", 0.5, 0.75)}
+      as={motion.h1} 
+      initial="hidden"
+      whileInView="visible"
+      variants={animate ? fadeIn("up", "", 0.5, 0.75) : {}}
       fontSize={{base: "36px",sm: "40px", md: "48px"}}
       >
         {infos.title}
       </Heading>
       <Text 
-      as={animate && motion.p}
-      initial={animate && "hidden"}
-      whileInView={animate && "visible"}
-      variants={animate && fadeIn("up", "", 1, 0.75)}
+      as={motion.p}
+      initial="hidden"
+      whileInView="visible"
+      variants={animate ? fadeIn("up", "", 0.8, 0.75) : {}}
       fontSize={{base: "14px", sm: "16px", md: "18px"}} 
       lineHeight={{base: "20px", sm: "22px", md: "24px"}}
       color="brand.gray"
