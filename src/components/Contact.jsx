@@ -13,6 +13,8 @@ import SectionInfo from './SectionInfo';
 import { useState } from 'react';
 import emailjs from "@emailjs/browser";
 import SectionWrapper from './SectionWrapper';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -88,6 +90,10 @@ const Contact = () => {
   return (
     <SectionWrapper id="contact">
       <Flex 
+      as={motion.div}
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeIn("up", "", 0.1, 1)}      
       direction="column"
       bg="brand.dark.600"
       borderRadius="16px"
