@@ -17,7 +17,7 @@ const About = () => {
             <ProffessionCard 
             name={proffesion.name} 
             icon={proffesion.icon} 
-            index={index+1} 
+            index={(index+1)*0.75} 
             />
           </GridItem>
       )}

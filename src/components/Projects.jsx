@@ -21,7 +21,7 @@ const Projects = () => {
             url={project.url}
             description={project.description}
             tags={project.tags}
-            index={index+1} 
+            index={(index+1)*0.75} 
             />
           </GridItem>
       )}
