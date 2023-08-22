@@ -6,7 +6,7 @@ import SectionWrapper from './SectionWrapper';
 
 const Tech = () => {
   return (
-    <SectionWrapper id="tech" RowGap="8px">  
+    <SectionWrapper id="tech" RowGap={{base: "28px", xl: "8px"}}>  
       <SectionInfo infos={sections.get("tech")} />
       <Flex w={{base: "300px", sm: "400px", md: "500px", lg: "auto"}} mx="auto" justify="center">
         <Cloud options={cloudOptions}>
