@@ -11,12 +11,17 @@ import {
     Icon
 } from '@chakra-ui/react';
 import { BiLogoGithub } from 'react-icons/bi';
-import { transform } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
 
 
-const ProjectCard = ({title, image, githubUrl, url, description, tags}) => {
+const ProjectCard = ({title, image, githubUrl, url, description, tags, index}) => {
   return (
     <Card 
+    as={motion.div}
+    initial="hidden"
+    whileInView="visible"
+    variants={fadeIn("right", "spring", index, 1)}
     bg="brand.dark.600" 
     borderRadius="16px"
     p="12px"

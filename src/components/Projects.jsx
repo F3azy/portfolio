@@ -12,7 +12,7 @@ const Projects = () => {
       templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)",lg: "repeat(3, 1fr)"}} 
       gap={{base: "32px", xl: "20px"}}
       >
-      {projects.map((project) => 
+      {projects.map((project, index) => 
           <GridItem  key={project.title}>
             <ProjectCard 
             title={project.title} 
@@ -21,6 +21,7 @@ const Projects = () => {
             url={project.url}
             description={project.description}
             tags={project.tags}
+            index={index+1} 
             />
           </GridItem>
       )}

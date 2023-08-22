@@ -6,11 +6,17 @@ import {
     VStack, 
     Text 
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
 
 
-const ProffessionCard = ({name, icon}) => {
+const ProffessionCard = ({name, icon, index}) => {
   return (
     <Card 
+    as={motion.div}
+    initial="hidden"
+    whileInView="visible"
+    variants={fadeIn("right", "spring", index, 1)}
     bg="brand.dark.800" 
     border="1px solid" 
     borderColor="brand.primary" 
