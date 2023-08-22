@@ -31,7 +31,7 @@ const NavItem = ({id, title, icon, active, setActive, onClose, index}) => {
       position="relative"
       >
         <Center>
-            <Center role="group" as={Link} href={`#${id}`} onClick={() => {setActive(title); onClose();}} w={"full"} justifyContent={{base: "flex-start", lg: "center"}} columnGap="12px">
+            <Center role="group" as={Link} href={`#${id}`} onClick={() => {setActive(title); if(onClose)onClose();}} w={"full"} justifyContent={{base: "flex-start", lg: "center"}} columnGap="12px">
               <Tooltip 
               hasArrow 
               label={`${title}`} 

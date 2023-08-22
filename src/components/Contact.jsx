@@ -12,6 +12,7 @@ import { sections } from '../constants';
 import SectionInfo from './SectionInfo';
 import { useState } from 'react';
 import emailjs from "@emailjs/browser";
+import SectionWrapper from './SectionWrapper';
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -85,14 +86,7 @@ const Contact = () => {
   }
 
   return (
-    <Flex 
-    id="contact"
-    direction="column"
-    rowGap={{base: "44px", xl: "88px"}}
-    justify="center"
-    minH={{lg: "100vh"}} 
-    p={{base: "48px 0", xl: "88px 0"}} 
-    >
+    <SectionWrapper id="contact">
       <Flex 
       direction="column"
       bg="brand.dark.600"
@@ -214,7 +208,7 @@ const Contact = () => {
           </Button>
         </VStack>
       </Flex>
-    </Flex>
+    </SectionWrapper>
   )
 };
 
