@@ -3,7 +3,7 @@ import { navLinks, socialLinks } from '../constants';
 import NavItem from './NavItem';
 import SocialLink from './SocialLink';
 import { motion } from 'framer-motion';
-import { fadeInSideBar } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 
 const Sidebar = ({active, setActive}) => {
   return (
@@ -11,7 +11,7 @@ const Sidebar = ({active, setActive}) => {
     as={motion.div}
     initial="hidden" 
     animate="visible" 
-    variants={fadeInSideBar("right", "tween", 0.5, 0.75)}
+    variants={fadeIn("right", "tween", 0.5, 0.75)}
     h="full" 
     direction="column" 
     justify="space-between" 
