@@ -1,6 +1,8 @@
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
 import { HeroBG, HeroAnimation } from '../assets';
 import Lottie from 'react-lottie-player';
+import { motion } from 'framer-motion';
+import { zoomIn } from '../utils/motion';
 
 const Hero = () => {
 
@@ -49,6 +51,10 @@ const Hero = () => {
         </Box>
       </Flex>
       <Box 
+      as={motion.div}
+      initial="hidden"
+      animate="visible"
+      variants={zoomIn(1, 1.5)}
       m={{base: "-100px auto 0", lg: "-200px auto 0"}}
       boxSize={{md:"500px", xl:"700px", '2xl':"800px"}}
       position={{base: "static", xl:"absolute"}} 
