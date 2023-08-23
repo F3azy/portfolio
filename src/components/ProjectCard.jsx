@@ -73,6 +73,7 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags, index}) =
             display="flex" 
             flexDirection="row" 
             justifyContent="flex-start"
+            flexWrap="wrap"
             columnGap="8px"
             mt="auto"
             >

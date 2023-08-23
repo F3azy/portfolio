@@ -98,10 +98,10 @@ const Contact = () => {
       bg="brand.dark.600"
       borderRadius="16px"
       p={{base: "12px", lg: "36px"}}
-      rowGap={{base: "32px", lg: "40px"}}
+      rowGap={{base: "16px", lg: "20px"}}
       >
         <SectionInfo infos={sections.get("contact")} />
-        <VStack as="form" onSubmit={handleSubmit} align="flex-end" rowGap="20px">
+        <VStack as="form" onSubmit={handleSubmit} align="flex-end" rowGap={{base: "20px"}}>
           <FormControl>
             <FormLabel 
             color="brand.white"

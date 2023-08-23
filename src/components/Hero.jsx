@@ -18,12 +18,13 @@ const Hero = () => {
     bgRepeat="no-repeat" 
     bgPosition="bottom" 
     bgSize={{lg: "100%"}}
+    overflow="hidden"
     >
       <Flex 
       columnGap={{base: "8px", md: "12px"}} 
       position={{base: "static", xl:"absolute"}} 
       top={{lg: "88px"}} 
-      left={{xl: "188px" ,'2xl': "360px"}}
+      left={{xl: "180px" ,'2xl': "320px"}}
       >
         <Flex direction="column" align="center">
           <Box boxSize="20px" bg="brand.tertiary" borderRadius="full" />
@@ -55,11 +56,11 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
       variants={zoomIn(1, 1.5)}
-      m={{base: "-100px auto 0", lg: "-200px auto 0"}}
-      boxSize={{md:"500px", xl:"700px", '2xl':"800px"}}
+      m={{base: "-100px auto 0", lg: "-240px auto 0"}}
+      boxSize={{md:"600px", lg: "700px"}}
       position={{base: "static", xl:"absolute"}} 
-      bottom="-30px" 
-      right={{xl: "188px" ,'2xl': "360px"}}
+      bottom={{xl: "-50px", '2xl': "-80px"}} 
+      right={{xl: "180px" ,'2xl': "320px"}}
       >
         <Lottie animationData={HeroAnimation} loop play />
       </Box>

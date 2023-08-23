@@ -9,11 +9,11 @@ const Projects = () => {
     <SectionWrapper id="projects">
       <SectionInfo infos={sections.get("project")} animate={true} />
       <Grid 
-      templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)",lg: "repeat(3, 1fr)"}} 
+      templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}} 
       gap={{base: "32px", xl: "20px"}}
       >
       {projects.map((project, index) => 
-          <GridItem  key={project.title}>
+          <GridItem key={project.title}>
             <ProjectCard 
             title={project.title} 
             image={project.image}
