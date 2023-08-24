@@ -1,10 +1,29 @@
-import { Box, Flex, Text, Heading } from '@chakra-ui/react';
+import { Box, Flex, Text, Heading, useMediaQuery } from '@chakra-ui/react';
 import { HeroBG, HeroAnimation } from '../assets';
 import Lottie from 'react-lottie-player';
 import { motion } from 'framer-motion';
 import { slideIn, slideOut, zoomIn } from '../utils/motion';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
+  const [isLargerThan768] = useMediaQuery('(min-width: 768px)', {ssr: false});
+  const [showBox, setShowBox] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowBox(false);
+    }, 2500);
+
+    return () => {clearTimeout(timer);};
+  }, []);
+
+  function getSlideOffset() {
+    if(isLargerThan768){
+      return 620;
+    }
+    return 350;
+  }
+
 
   return (
     <Flex 
@@ -20,6 +39,7 @@ const Hero = () => {
     bgSize={{lg: "100%"}}
     >
       <Flex 
+      minH="270px"
       columnGap={{base: "8px", md: "12px"}} 
       position={{base: "static", xl:"absolute"}} 
       top={{lg: "88px"}} 
@@ -28,10 +48,11 @@ const Hero = () => {
         <Flex 
         as={motion.div} 
         initial="hidden" 
-        animate="visible" 
-        variants={slideIn("left", "", 2, 0.5, 640)} 
+        animate="visible"
+        variants={slideIn("left", "", 2, 0.5, getSlideOffset())} 
         direction="column" 
         align="center"
+        zIndex={9}
         >
           <Box 
           as={motion.div} 
@@ -55,23 +76,25 @@ const Hero = () => {
                 duration: 0.5,
                 ease: "easeOut",
               }
-            }}}  
+            }
+          }}  
           w="2px" 
           // h={{base: "200px", lg: "300px"}} 
           bg="brand.tertiary" 
           />
         </Flex>
-        <Box h="min-content" overflow="hidden" position="relative">
+        <Box h="min-content" position="relative">
+          {showBox && 
           <Box 
           as={motion.div} 
           initial="visible" 
           animate="hidden" 
-          variants={slideOut("left", "", 2, 0.5, 640)} 
+          variants={slideOut("left", "", 2, 0.5, getSlideOffset())} 
           bg="brand.dark.700" 
           w="full" 
           h="full" 
-          position="absolute" 
-          />
+          position="absolute"
+          />}
           <Heading 
           as="h1" 
           fontSize={{base: "32px", md:"48px"}} 
@@ -98,16 +121,17 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
       variants={zoomIn(1, 1.5)}
-      m={{base: "-100px auto 0", lg: "-240px auto 0"}}
-      boxSize={{md:"600px", lg: "700px"}}
+      m={{base: "-100px auto 0", lg: "-150px auto 0"}}
+      boxSize={{md:"80vw", lg: "40vw"}}
       position={{base: "static", xl:"absolute"}} 
-      bottom={{xl: "-50px", '2xl': "-60px"}} 
+      bottom={{xl: "-80px", '2xl': "-60px"}} 
       right={{xl: "180px" ,'2xl': "320px"}}
+      zIndex={10}
       >
         <Lottie animationData={HeroAnimation} loop play />
       </Box>
     </Flex>
-  )
+    )
 };
 
 export default Hero;
