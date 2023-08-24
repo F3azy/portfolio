@@ -9,7 +9,7 @@ const About = () => {
     <SectionWrapper id="about">
       <SectionInfo infos={sections.get("about")} animate={true} />
       <Grid 
-      templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}} 
+      templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)"}} 
       gap={{base: "40px", xl: "20px"}}
       >
       {proffesions.map((proffesion, index) => 

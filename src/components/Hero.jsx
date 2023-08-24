@@ -18,7 +18,6 @@ const Hero = () => {
     bgRepeat="no-repeat" 
     bgPosition="bottom" 
     bgSize={{lg: "100%"}}
-    overflow="hidden"
     >
       <Flex 
       columnGap={{base: "8px", md: "12px"}} 
@@ -102,7 +101,7 @@ const Hero = () => {
       m={{base: "-100px auto 0", lg: "-240px auto 0"}}
       boxSize={{md:"600px", lg: "700px"}}
       position={{base: "static", xl:"absolute"}} 
-      bottom={{xl: "-50px", '2xl': "-80px"}} 
+      bottom={{xl: "-50px", '2xl': "-60px"}} 
       right={{xl: "180px" ,'2xl': "320px"}}
       >
         <Lottie animationData={HeroAnimation} loop play />
