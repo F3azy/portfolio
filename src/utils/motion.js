@@ -1,4 +1,4 @@
-export const fadeIn = (direction, type, delay, duration, offset = 100) => {
+export const fadeIn = (direction, type, duration, delay = 0, offset = 100) => {
     return {
         hidden: {
             x: direction === "left" ? offset : direction === "right" ? -offset : 0,
@@ -13,7 +13,7 @@ export const fadeIn = (direction, type, delay, duration, offset = 100) => {
             transition: {
                 when: "beforeChildren",
                 type: type,
-                delay: delay,
+                ...((delay===0) && delay),
                 duration: duration,
                 ease: "easeOut",
             },
@@ -21,7 +21,7 @@ export const fadeIn = (direction, type, delay, duration, offset = 100) => {
     };
 };
 
-export const slideIn = (direction, type, delay, duration, offset = 100) => {
+export const slideIn = (direction, type, duration, delay = 0, offset = 100) => {
     return {
         hidden: {
             x: direction === "left" ? offset : direction === "right" ? -offset : 0,
@@ -42,7 +42,7 @@ export const slideIn = (direction, type, delay, duration, offset = 100) => {
     };
 };
 
-export const slideOut = (direction, type, delay, duration, offset = 100) => {
+export const slideOut = (direction, type, duration, delay = 0, offset = 100) => {
     return {
         visible: {
             x: 0,
@@ -63,7 +63,7 @@ export const slideOut = (direction, type, delay, duration, offset = 100) => {
     };
 };
 
-export const zoomIn = (delay, duration) => {
+export const zoomIn = (duration, delay = 0) => {
     return {
         hidden: {
             scale: 0,
@@ -82,7 +82,7 @@ export const zoomIn = (delay, duration) => {
     };
 };
 
-export const textReveal = (direction, type, delay, duration, offset = 100) => {
+export const textReveal = (direction, type, duration, delay = 0, offset = 100) => {
     return {
         hidden: {
             x: direction === "left" ? offset : direction === "right" ? -offset : 0,
@@ -101,6 +101,18 @@ export const textReveal = (direction, type, delay, duration, offset = 100) => {
                 duration: duration,
                 ease: "easeOut",
             },
+        }
+    };
+};
+
+export const staggerContainer = (staggerChildren, delayChildren) => {
+    return {
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: staggerChildren,
+            delayChildren: delayChildren || 0,
+          },
         }
     };
 };

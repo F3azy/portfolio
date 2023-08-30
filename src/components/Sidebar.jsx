@@ -11,7 +11,7 @@ const Sidebar = ({active, setActive}) => {
     as={motion.div}
     initial="hidden" 
     animate="visible" 
-    variants={fadeIn("right", "tween", 0.5, 0.75)}
+    variants={fadeIn("right", "tween", 0.75, 0.5)}
     h="full" 
     direction="column" 
     justify="space-between" 

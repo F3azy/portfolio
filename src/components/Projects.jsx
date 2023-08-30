@@ -3,16 +3,23 @@ import { projects, sections } from '../constants';
 import SectionInfo from './SectionInfo';
 import ProjectCard from './ProjectCard';
 import SectionWrapper from './SectionWrapper';
+import { staggerContainer } from '../utils/motion';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
     <SectionWrapper id="projects">
       <SectionInfo infos={sections.get("project")} animate={true} />
       <Grid 
+      as={motion.div}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{once: true}}
+      variants={staggerContainer(0.5, 1)}
       templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}} 
       gap={{base: "32px", xl: "20px"}}
       >
-      {projects.map((project, index) => 
+      {projects.map((project) => 
           <GridItem key={project.title}>
             <ProjectCard 
             title={project.title} 
@@ -21,7 +28,6 @@ const Projects = () => {
             url={project.url}
             description={project.description}
             tags={project.tags}
-            index={(index+1)*0.75} 
             />
           </GridItem>
       )}

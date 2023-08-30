@@ -14,7 +14,8 @@ const Tech = () => {
       as={motion.div}
       initial="hidden"
       whileInView="visible"
-      variants={zoomIn(0.4, 1)}
+      viewport={{once: true}}
+      variants={zoomIn(1, 0.4)}
       w={{base: "300px", sm: "400px", md: "500px", lg: "auto"}} 
       mx="auto" 
       justify="center"

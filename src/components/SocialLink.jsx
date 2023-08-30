@@ -6,7 +6,7 @@ const SocialLink = ({icon, url, onClose, index}) => {
   return (
     <Box
     as={motion.div} 
-    variants={fadeIn("right", "spring", index * 0.5, 0.5)} 
+    variants={fadeIn("right", "spring", 0.5, index * 0.5)} 
     p={{base: "0", lg: "0 12px"}} 
     position="relative"
     >

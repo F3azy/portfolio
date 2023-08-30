@@ -21,7 +21,7 @@ const Hero = () => {
     if(isLargerThan768){
       return 620;
     }
-    return 350;
+    return 340;
   }
 
 
@@ -49,7 +49,7 @@ const Hero = () => {
         as={motion.div} 
         initial="hidden" 
         animate="visible"
-        variants={slideIn("left", "", 2, 0.5, getSlideOffset())} 
+        variants={slideIn("left", "", 0.5, 2, getSlideOffset())} 
         direction="column" 
         align="center"
         zIndex={9}
@@ -58,7 +58,7 @@ const Hero = () => {
           as={motion.div} 
           initial="hidden" 
           animate="visible" 
-          variants={slideIn("down", "", 1, 0.5, 150)} 
+          variants={slideIn("down", "", 0.5, 1, 150)} 
           boxSize="20px" 
           bg="brand.tertiary" 
           borderRadius="full" 
@@ -89,7 +89,7 @@ const Hero = () => {
           as={motion.div} 
           initial="visible" 
           animate="hidden" 
-          variants={slideOut("left", "", 2, 0.5, getSlideOffset())} 
+          variants={slideOut("left", "", 0.5, 2, getSlideOffset())} 
           bg="brand.dark.700" 
           w="full" 
           h="full" 
@@ -120,7 +120,7 @@ const Hero = () => {
       as={motion.div}
       initial="hidden"
       animate="visible"
-      variants={zoomIn(1, 1.5)}
+      variants={zoomIn(1.5, 1)}
       m={{base: "-100px auto 0", lg: "-150px auto 0"}}
       boxSize={{md:"80vw", lg: "40vw"}}
       position={{base: "static", xl:"absolute"}} 

@@ -15,13 +15,14 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 
 
-const ProjectCard = ({title, image, githubUrl, url, description, tags, index}) => {
+const ProjectCard = ({title, image, githubUrl, url, description, tags}) => {
   return (
     <Card 
     as={motion.div}
-    initial="hidden"
-    whileInView="visible"
-    variants={fadeIn("right", "spring", index, 1)}
+    // initial="hidden"
+    // whileInView="visible"
+    // viewport={{once: true}}
+    variants={fadeIn("right", "spring", 1)}
     bg="brand.dark.600" 
     borderRadius="16px"
     p="12px"
@@ -39,7 +40,6 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags, index}) =
                 color="#171515"
                 bg="brand.white"
                 borderRadius="full"
-                // color="brand.secondary"
                 boxSize={10}
                 as={BiLogoGithub} 
                 position="absolute" 

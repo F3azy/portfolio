@@ -10,13 +10,14 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 
 
-const ProffessionCard = ({name, icon, index}) => {
+const ProffessionCard = ({name, icon}) => {
   return (
     <Card 
     as={motion.div}
-    initial="hidden"
-    whileInView="visible"
-    variants={fadeIn("right", "spring", index, 1)}
+    // initial="hidden"
+    // whileInView="visible"
+    // viewport={{once: true}}
+    variants={fadeIn("right", "spring", 1)}
     bg="brand.dark.800" 
     border="1px solid" 
     borderColor="brand.primary" 
