@@ -1,26 +1,6 @@
-export const fadeIn = (direction, type, duration, offset = 100) => {
-    return {
-        hidden: {
-            x: direction === "left" ? offset : direction === "right" ? -offset : 0,
-            y: direction === "up" ? offset : direction === "down" ? -offset : 0,
-            opacity: 0,
-            when: "afterChildren",
-        },
-        visible: {
-            x: 0,
-            y: 0,
-            opacity: 1,
-            transition: {
-                when: "beforeChildren",
-                type: type,
-                duration: duration,
-                ease: "easeOut",
-            },
-        },
-    };
-};
+import { delay } from "framer-motion";
 
-export const textFadeIn = (direction, type, duration, delay, offset = 100) => {
+export const fadeIn = (direction, type, duration, delay, offset = 100) => {
     return {
         hidden: {
             x: direction === "left" ? offset : direction === "right" ? -offset : 0,
@@ -35,7 +15,7 @@ export const textFadeIn = (direction, type, duration, delay, offset = 100) => {
             transition: {
                 when: "beforeChildren",
                 type: type,
-                delay: delay,
+                ...((delay) && {delay: delay}),
                 duration: duration,
                 ease: "easeOut",
             },
