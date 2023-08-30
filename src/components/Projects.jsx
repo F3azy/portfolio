@@ -5,17 +5,26 @@ import ProjectCard from './ProjectCard';
 import SectionWrapper from './SectionWrapper';
 import { staggerContainer } from '../utils/motion';
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { useIsInViewport } from '../hooks/useIsInView';
 
-const Projects = () => {
+const Projects = ({setActive}) => {
+  const ProjectsRef = useRef(null);
+  const isInViewPort = useIsInViewport(ProjectsRef);
+
+  useEffect(() => {
+    if(isInViewPort) if(setActive) setActive("Projects");
+  }, [isInViewPort]);
+
   return (
-    <SectionWrapper id="projects">
+    <SectionWrapper id="projects" Ref={ProjectsRef}>
       <SectionInfo infos={sections.get("project")} animate={true} />
       <Grid 
       as={motion.div}
       initial="hidden"
       whileInView="visible"
       viewport={{once: true}}
-      variants={staggerContainer(0.5, 1)}
+      variants={staggerContainer(0.5, 0.5)}
       templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}} 
       gap={{base: "32px", xl: "20px"}}
       >

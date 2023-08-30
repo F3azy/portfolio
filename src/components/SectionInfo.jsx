@@ -1,6 +1,6 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
+import { textFadeIn } from "../utils/motion";
 
 const SectionInfo = ({infos, animate = false}) => {
   return (
@@ -10,7 +10,7 @@ const SectionInfo = ({infos, animate = false}) => {
       initial="hidden"
       whileInView="visible"
       viewport={{once: true}}
-      variants={animate ? fadeIn("up", "", 0.75, 0.1) : {}}
+      variants={animate ? textFadeIn("up", "tween", 0.75, 0.1) : {}}
       fontSize={{base: "12px", sm: "14px", md: "16px"}} 
       color="brand.gray"
       letterSpacing="3px"
@@ -22,7 +22,7 @@ const SectionInfo = ({infos, animate = false}) => {
       initial="hidden"
       whileInView="visible"
       viewport={{once: true}}
-      variants={animate ? fadeIn("up", "", 0.75,  0.5) : {}}
+      variants={animate ? textFadeIn("up", "tween", 0.75,  0.3) : {}}
       fontSize={{base: "36px",sm: "40px", md: "48px"}}
       >
         {infos.title}
@@ -32,7 +32,7 @@ const SectionInfo = ({infos, animate = false}) => {
       initial="hidden"
       whileInView="visible"
       viewport={{once: true}}
-      variants={animate ? fadeIn("up", "", 0.75, 0.8) : {}}
+      variants={animate ? textFadeIn("up", "tween", 0.75, 0.5) : {}}
       fontSize={{base: "14px", sm: "16px", md: "18px"}} 
       lineHeight={{base: "20px", sm: "22px", md: "24px"}}
       color="brand.gray"

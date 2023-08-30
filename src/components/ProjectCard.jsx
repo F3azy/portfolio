@@ -19,9 +19,6 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags}) => {
   return (
     <Card 
     as={motion.div}
-    // initial="hidden"
-    // whileInView="visible"
-    // viewport={{once: true}}
     variants={fadeIn("right", "spring", 1)}
     bg="brand.dark.600" 
     borderRadius="16px"

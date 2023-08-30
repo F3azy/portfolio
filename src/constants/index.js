@@ -23,7 +23,7 @@ import {
 export const navLinks = [
     {
         id: "hero",
-        title: "Home",
+        title: "Hero",
         icon: BiHomeAlt
     },
     {

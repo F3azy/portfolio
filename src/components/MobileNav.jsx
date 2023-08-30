@@ -18,7 +18,7 @@ import SocialLink from './SocialLink';
 import { useLayoutEffect } from 'react';
 import { logo } from '../assets';
 
-const MobileNav = ({active, setActive}) => {
+const MobileNav = ({active, setActive, setClicked}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     useLayoutEffect (() => {
@@ -95,6 +95,7 @@ const MobileNav = ({active, setActive}) => {
                         icon={navLink.icon} 
                         active={active} 
                         setActive={setActive}
+                        setClicked={setClicked}
                         onClose={onClose}
                         />
                         )}

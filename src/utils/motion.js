@@ -1,4 +1,4 @@
-export const fadeIn = (direction, type, duration, delay = 0, offset = 100) => {
+export const fadeIn = (direction, type, duration, offset = 100) => {
     return {
         hidden: {
             x: direction === "left" ? offset : direction === "right" ? -offset : 0,
@@ -13,7 +13,29 @@ export const fadeIn = (direction, type, duration, delay = 0, offset = 100) => {
             transition: {
                 when: "beforeChildren",
                 type: type,
-                ...((delay===0) && delay),
+                duration: duration,
+                ease: "easeOut",
+            },
+        },
+    };
+};
+
+export const textFadeIn = (direction, type, duration, delay, offset = 100) => {
+    return {
+        hidden: {
+            x: direction === "left" ? offset : direction === "right" ? -offset : 0,
+            y: direction === "up" ? offset : direction === "down" ? -offset : 0,
+            opacity: 0,
+            when: "afterChildren",
+        },
+        visible: {
+            x: 0,
+            y: 0,
+            opacity: 1,
+            transition: {
+                when: "beforeChildren",
+                type: type,
+                delay: delay,
                 duration: duration,
                 ease: "easeOut",
             },
@@ -105,13 +127,14 @@ export const textReveal = (direction, type, duration, delay = 0, offset = 100) =
     };
 };
 
-export const staggerContainer = (staggerChildren, delayChildren) => {
+export const staggerContainer = (staggerChildren, delayChildren, staggerDir = 1) => {
     return {
         hidden: {},
         visible: {
           transition: {
             staggerChildren: staggerChildren,
             delayChildren: delayChildren || 0,
+            staggerDirection: staggerDir,
           },
         }
     };

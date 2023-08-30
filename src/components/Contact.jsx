@@ -15,8 +15,10 @@ import emailjs from "@emailjs/browser";
 import SectionWrapper from './SectionWrapper';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
+import { useEffect, useRef } from 'react';
+import { useIsInViewport } from '../hooks/useIsInView';
 
-const Contact = () => {
+const Contact = ({setActive}) => {
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast()
   const [form, setForm] = useState({
@@ -24,6 +26,13 @@ const Contact = () => {
     email: "",
     message: ""
   });
+
+  const ContactRef = useRef(null);
+  const isInViewPort = useIsInViewport(ContactRef);
+
+  useEffect(() => {
+    if(isInViewPort) if(setActive) setActive("Contact");
+  }, [isInViewPort]);
 
   function handleChange(e) {
     const { target } = e;
@@ -88,7 +97,7 @@ const Contact = () => {
   }
 
   return (
-    <SectionWrapper id="contact">
+    <SectionWrapper id="contact" Ref={ContactRef}>
       <Flex 
       as={motion.div}
       initial="hidden"

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useState, useLayoutEffect } from 'react';
 import { fadeIn } from "../utils/motion";
 
-const NavItem = ({id, title, icon, active, setActive, onClose, index}) => {
+const NavItem = ({id, title, icon, active, setActive, onClose, setClicked}) => {
     const [isHovering, setIsHovering] = useState(false);
     const [isLargerThan992, setIsLargerThan992] = useState(false);
 
@@ -26,12 +26,26 @@ const NavItem = ({id, title, icon, active, setActive, onClose, index}) => {
   return (
       <Box 
       as={motion.div} 
-      variants={fadeIn("right", "spring", 0.5, index * 0.5,)}
+      variants={fadeIn("right", "spring", 0.5)}
       p={{base: "0", lg: "0 12px"}} 
       position="relative"
       >
         <Center>
-            <Center role="group" as={Link} href={`#${id}`} onClick={() => {setActive(title); if(onClose)onClose();}} w={"full"} justifyContent={{base: "flex-start", lg: "center"}} columnGap="12px">
+            <Center 
+            role="group" 
+            as={Link} 
+            href={`#${id}`} 
+            onClick={() => 
+              {
+                setActive(title); 
+                if(onClose)onClose(); 
+                setClicked(true); 
+                setTimeout(() => setClicked(false), 600);
+              }} 
+            w={"full"} 
+            justifyContent={{base: "flex-start", lg: "center"}} 
+            columnGap="12px"
+            >
               <Tooltip 
               hasArrow 
               label={`${title}`} 

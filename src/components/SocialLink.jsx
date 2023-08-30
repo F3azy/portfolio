@@ -2,11 +2,11 @@ import { Box, Center, Icon, Link } from '@chakra-ui/react';
 import { fadeIn } from "../utils/motion";
 import { motion } from 'framer-motion';
 
-const SocialLink = ({icon, url, onClose, index}) => {
+const SocialLink = ({icon, url, onClose}) => {
   return (
     <Box
     as={motion.div} 
-    variants={fadeIn("right", "spring", 0.5, index * 0.5)} 
+    variants={fadeIn("right", "spring", 0.5)} 
     p={{base: "0", lg: "0 12px"}} 
     position="relative"
     >

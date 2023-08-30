@@ -1,10 +1,11 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
 
-const SectionWrapper = ({children, id, RowGap = {base: "44px", xl: "88px"}}) => {
+const SectionWrapper = ({children, id, RowGap = {base: "44px", xl: "88px"}, Ref}) => {
   return (
     <Flex 
     id={id}
+    ref={Ref}
     direction="column"
     rowGap={RowGap}
     justify="center"

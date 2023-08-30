@@ -3,11 +3,19 @@ import { HeroBG, HeroAnimation } from '../assets';
 import Lottie from 'react-lottie-player';
 import { motion } from 'framer-motion';
 import { slideIn, slideOut, zoomIn } from '../utils/motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useIsInViewport } from '../hooks/useIsInView';
 
-const Hero = () => {
+const Hero = ({setActive}) => {
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)', {ssr: false});
   const [showBox, setShowBox] = useState(true);
+
+  const HeroRef = useRef(null);
+  const isInViewPort = useIsInViewport(HeroRef);
+
+  useEffect(() => {
+    if(isInViewPort)  if(setActive)  setActive("Hero");
+  }, [isInViewPort]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,6 +36,7 @@ const Hero = () => {
   return (
     <Flex 
     id="hero"
+    ref={HeroRef}
     direction="column"
     minH={{lg: "100vh"}} 
     p={{base: "48px 16px", md: "60px 16px", lg: "48px 94px"}} 
@@ -126,7 +135,7 @@ const Hero = () => {
       position={{base: "static", xl:"absolute"}} 
       bottom={{xl: "-80px", '2xl': "-60px"}} 
       right={{xl: "180px" ,'2xl': "320px"}}
-      zIndex={10}
+      zIndex={9}
       >
         <Lottie animationData={HeroAnimation} loop play />
       </Box>

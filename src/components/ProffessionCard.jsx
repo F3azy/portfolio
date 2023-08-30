@@ -14,9 +14,6 @@ const ProffessionCard = ({name, icon}) => {
   return (
     <Card 
     as={motion.div}
-    // initial="hidden"
-    // whileInView="visible"
-    // viewport={{once: true}}
     variants={fadeIn("right", "spring", 1)}
     bg="brand.dark.800" 
     border="1px solid" 

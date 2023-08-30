@@ -3,9 +3,9 @@ import { navLinks, socialLinks } from '../constants';
 import NavItem from './NavItem';
 import SocialLink from './SocialLink';
 import { motion } from 'framer-motion';
-import { fadeIn } from "../utils/motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
-const Sidebar = ({active, setActive}) => {
+const Sidebar = ({active, setActive, setClicked}) => {
   return (
     <Flex 
     as={motion.div}
@@ -22,8 +22,16 @@ const Sidebar = ({active, setActive}) => {
     zIndex={10}
     display={{base: "none", lg: "flex"}}
     >
-      <Flex as="nav" direction="column" rowGap="12px">
-        {navLinks.map((navLink, index) => 
+      <Flex  
+      as={motion.nav} 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{once: true}}
+      variants={staggerContainer(0.4, 0.75)}
+      direction="column" 
+      rowGap="12px"
+      >
+        {navLinks.map((navLink) => 
           <NavItem 
           key={navLink.id} 
           id={navLink.id} 
@@ -31,17 +39,24 @@ const Sidebar = ({active, setActive}) => {
           icon={navLink.icon} 
           active={active} 
           setActive={setActive}
-          index={index}
+          setClicked={setClicked}
           />
         )}
       </Flex>
-      <Flex direction="column-reverse" rowGap="12px">
-        {socialLinks.toReversed().map((socialLink, index) => 
+      <Flex
+      as={motion.div} 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{once: true}}
+      variants={staggerContainer(0.4, 0.75, -1)} 
+      direction="column" 
+      rowGap="12px"
+      >
+        {socialLinks.map((socialLink) => 
           <SocialLink 
           key={socialLink.id} 
           icon={socialLink.icon} 
           url={socialLink.url} 
-          index={index}
           />
         )}
       </Flex>
