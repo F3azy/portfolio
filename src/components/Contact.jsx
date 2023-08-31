@@ -56,7 +56,7 @@ const Contact = ({setActive}) => {
     if(isSubmitDisabled) {
       setIsLoading(false);
       toast({
-        title: "Didn't you forget something?.",
+        title: "Did you forget something?",
         description: "Please fill all the inputs, thank you!",
         position: "top",
         status: 'error',
