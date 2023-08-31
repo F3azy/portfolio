@@ -52,6 +52,7 @@ const Hero = ({setActive}) => {
     bgRepeat="no-repeat" 
     bgPosition="bottom" 
     bgSize={{lg: "100%"}}
+    overflow={{xl: "hidden"}}
     >
       <Flex 
       minH="270px"
