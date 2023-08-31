@@ -7,8 +7,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useIsInViewport } from '../hooks/useIsInView';
 
 const Hero = ({setActive}) => {
-  const [isLargerThan768] = useMediaQuery('(min-width: 768px)', {ssr: false});
-  const [isLargerThan412] = useMediaQuery('(min-width: 412px)', {ssr: false});
+  const [isLargerThan768, isLargerThan412] = useMediaQuery(['(min-width: 768px)', '(min-width: 412px)'], {ssr: false});
+  // const [isLargerThan412] = useMediaQuery('(min-width: 412px)', {ssr: false});
   const [showBox, setShowBox] = useState(true);
 
   const HeroRef = useRef(null);
@@ -27,8 +27,9 @@ const Hero = ({setActive}) => {
   }, []);
 
   function getSlideOffset() {
+    
     if(isLargerThan768){
-      return 620;
+      return 600;
     }
 
     if(isLargerThan412){
@@ -95,7 +96,6 @@ const Hero = ({setActive}) => {
             }
           }}  
           w="2px" 
-          // h={{base: "200px", lg: "300px"}} 
           bg="brand.tertiary" 
           />
         </Flex>
@@ -105,18 +105,20 @@ const Hero = ({setActive}) => {
           as={motion.div} 
           initial="visible" 
           animate="hidden" 
-          variants={slideOut("left", "", 0.5, 2, getSlideOffset())} 
+          variants={slideOut("left", "", 0.5, 2, getSlideOffset()+20)} 
           bg="brand.dark.700" 
-          w="full" 
+          w={`${getSlideOffset()}px` }
           h="full" 
           position="absolute"
-          />}
+          />
+          }
           <Heading 
           as="h1" 
           fontSize={{base: "32px", md:"48px"}} 
           lineHeight={{base: "36px", md:"48px"}}
           letterSpacing="-0.5px"
           overflow="hidden"
+          ml="4px"
           >
             Hello World, I'm <Text as="span" color="brand.tertiary">Francesco</Text>
           </Heading>
@@ -126,6 +128,7 @@ const Hero = ({setActive}) => {
           fontSize={{base: "14px",sm: "20px", md: "24px"}} 
           lineHeight={{base: "20px", sm: "26px", md:"32px"}} 
           letterSpacing={{base: "1.5px", md: "1px"}}
+          ml="4px"
           >
             I am a <Text as="span" color="brand.tertiary">Front-end</Text> developer, <br/>
             aspiring to become a FullStack developer 
