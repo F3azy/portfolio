@@ -100,7 +100,7 @@ const MobileNav = ({active, setActive, setClicked}) => {
                         />
                         )}
                     </Flex>
-                    <Flex mt={{base: "100px", lg: "0"}} justifyContent="center" columnGap={{base: "40px", md: "60px"}}>
+                    <Flex justifyContent="center" columnGap={{base: "40px", md: "60px"}}>
                         {socialLinks.map((socialLink) => 
                         <SocialLink 
                         key={socialLink.id} 
