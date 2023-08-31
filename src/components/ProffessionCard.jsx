@@ -28,7 +28,7 @@ const ProffessionCard = ({name, icon}) => {
           {<Icon boxSize="70%" as={icon} />}
           <Text 
           color="brand.white"
-          fontSize={{base: "5vw", md: '3vw', lg: '2vw', '2xl': "1.5vw"}}
+          fontSize={{base: "5vw", md: '2.5vw', lg: '1.3vw', '2xl': "1.1vw"}}
           fontWeight="bold"
           textAlign="center"
           letterSpacing="2px"

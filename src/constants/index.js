@@ -86,7 +86,7 @@ export const sections = new Map([
 
 export const proffesions = [
     {
-        name: "Front-end Developer",
+        name: "FRONT-END DEVELOPER",
         icon: FrontEndIcon
     },
 ];
