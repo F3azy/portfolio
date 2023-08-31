@@ -8,7 +8,6 @@ import { useIsInViewport } from '../hooks/useIsInView';
 
 const Hero = ({setActive}) => {
   const [isLargerThan768, isLargerThan412] = useMediaQuery(['(min-width: 768px)', '(min-width: 412px)'], {ssr: false});
-  // const [isLargerThan412] = useMediaQuery('(min-width: 412px)', {ssr: false});
   const [showBox, setShowBox] = useState(true);
 
   const HeroRef = useRef(null);
