@@ -26,6 +26,7 @@ const Contact = ({setActive}) => {
     email: "",
     message: ""
   });
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(!(form.name && form.email && form.message));
 
   const ContactRef = useRef(null);
   const isInViewPort = useIsInViewport(ContactRef);
@@ -33,6 +34,10 @@ const Contact = ({setActive}) => {
   useEffect(() => {
     if(isInViewPort) if(setActive) setActive("Contact");
   }, [isInViewPort]);
+
+  useEffect(() => {
+    setIsSubmitDisabled(!(form.name && form.email && form.message));
+  }, [form]);
 
   function handleChange(e) {
     const { target } = e;
@@ -47,6 +52,19 @@ const Contact = ({setActive}) => {
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
+
+    if(isSubmitDisabled) {
+      setIsLoading(false);
+      toast({
+        title: "Didn't you forget something?.",
+        description: "Please fill all the inputs, thank you!",
+        position: "top",
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      });
+      return;
+    }
 
     emailjs.send(
       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -72,7 +90,7 @@ const Contact = ({setActive}) => {
           status: 'success',
           duration: 9000,
           isClosable: true,
-        })
+        });
 
         setForm({
           name: "",
@@ -91,7 +109,7 @@ const Contact = ({setActive}) => {
           status: 'error',
           duration: 9000,
           isClosable: true,
-        })
+        });
       }
     );
   }
@@ -219,6 +237,7 @@ const Contact = ({setActive}) => {
           _active={{
             bg: "brand.dark.700" 
           }}
+          isDisabled={isSubmitDisabled}
           >
             Send
           </Button>
