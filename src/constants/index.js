@@ -84,7 +84,7 @@ export const sections = new Map([
     }]
 ]);
 
-export const proffesions = [
+export const professions = [
     {
         name: "FRONT-END DEVELOPER",
         icon: FrontEndIcon
