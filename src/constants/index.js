@@ -141,7 +141,7 @@ export const projects = [
         image: portfolio,
         githubUrl: "https://github.com/F3azy/portfolio",
         url: "",
-        description: "The page you are currently on. It shows my proffesions, technologies and all of my current projects.",
+        description: "The page you are currently on. It shows my professions, technologies and all of my current projects.",
         tags: [
             {
                 name: "react",
