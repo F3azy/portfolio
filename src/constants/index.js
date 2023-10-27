@@ -157,7 +157,7 @@ export const projects = [
         title: "Movie Info",
         image: movieInfo,
         githubUrl: "https://github.com/F3azy/movieInfo",
-        url: "https://f3azy.github.io/movieInfo/",
+        url: "https://movie-info-murex.vercel.app",
         description: "A small web application made for practice the basics of React and fetching data.",
         tags: [
             {
@@ -174,7 +174,7 @@ export const projects = [
         title: "Poke Info",
         image: pokeInfo,
         githubUrl: "https://github.com/F3azy/pokeInfo",
-        url: "https://f3azy.github.io/pokeInfo/",
+        url: "https://poke-info-chi.vercel.app",
         description: "My first ever project in React.js. Created to learn and practice the basics of React, fetching data and routing.",
         tags: [
             {
