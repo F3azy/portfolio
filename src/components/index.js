@@ -1,17 +1,7 @@
-import Sidebar from './Sidebar';
-import Hero from './Hero';
-import About from './About';
-import Tech from './Tech';
-import Projects from './Projects';
-import Contact from './Contact';
-import MobileNav from './MobileNav';
-
-export {
-    Sidebar, 
-    MobileNav,
-    Hero, 
-    About, 
-    Tech, 
-    Projects, 
-    Contact
-};
+export { default as Sidebar } from './Sidebar';
+export { default as MobileNav } from './MobileNav';
+export { default as Hero } from './Hero';
+export { default as About } from './About';
+export { default as Tech } from './Tech';
+export { default as Projects } from './Projects';
+export { default as Contact } from './Contact';
