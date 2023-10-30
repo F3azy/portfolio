@@ -62,13 +62,9 @@ const Hero = ({setActive}) => {
       left={{xl: "180px" ,'2xl': "320px"}}
       >
         <Flex 
-        as={motion.div} 
-        initial="hidden" 
-        animate="visible"
-        variants={slideIn("left", "", 0.5, 2, getSlideOffset())} 
         direction="column" 
         align="center"
-        zIndex={9}
+        zIndex={2}
         >
           <Box 
           as={motion.div} 
@@ -101,37 +97,42 @@ const Hero = ({setActive}) => {
         <Box h="min-content" position="relative">
           {showBox && 
           <Box 
-          as={motion.div} 
-          initial="visible" 
-          animate="hidden" 
-          variants={slideOut("left", "", 0.5, 2, getSlideOffset()+20)} 
           bg="brand.dark.700" 
           w={`${getSlideOffset()}px` }
           h="full" 
           position="absolute"
+          left={-(getSlideOffset()+20)}
+          zIndex={1}
           />
           }
-          <Heading 
-          as="h1" 
-          fontSize={{base: "32px", md:"48px"}} 
-          lineHeight={{base: "36px", md:"48px"}}
-          letterSpacing="-0.5px"
-          overflow="hidden"
-          ml="4px"
+          <Box
+          as={motion.div} 
+          initial="hidden" 
+          animate="visible" 
+          variants={slideIn("right", "", 0.5, 2, getSlideOffset()+20)} 
           >
-            Hello World, I'm <Text as="span" color="brand.tertiary">Francesco</Text>
-          </Heading>
-          <Text 
-          m={{base: "8px 0 0",md: "16px 0 0"}}
-          fontWeight="bold" 
-          fontSize={{base: "14px",sm: "20px", md: "24px"}} 
-          lineHeight={{base: "20px", sm: "26px", md:"32px"}} 
-          letterSpacing={{base: "1.5px", md: "1px"}}
-          ml="4px"
-          >
-            I am a <Text as="span" color="brand.tertiary">Front-end</Text> developer, <br/>
-            aspiring to become a FullStack developer 
-          </Text>
+            <Heading 
+            as="h1" 
+            fontSize={{base: "32px", md:"48px"}} 
+            lineHeight={{base: "36px", md:"48px"}}
+            letterSpacing="-0.5px"
+            overflow="hidden"
+            ml="4px"
+            >
+              Hello World, I'm <Text as="span" color="brand.tertiary">Francesco</Text>
+            </Heading>
+            <Text 
+            m={{base: "8px 0 0",md: "16px 0 0"}}
+            fontWeight="bold" 
+            fontSize={{base: "14px",sm: "20px", md: "24px"}} 
+            lineHeight={{base: "20px", sm: "26px", md:"32px"}} 
+            letterSpacing={{base: "1.5px", md: "1px"}}
+            ml="4px"
+            >
+              I am a <Text as="span" color="brand.tertiary">Front-end</Text> developer, <br/>
+              aspiring to become a FullStack developer 
+            </Text>
+          </Box>
         </Box>
       </Flex>
       <Box 
