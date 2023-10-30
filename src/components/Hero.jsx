@@ -52,7 +52,7 @@ const Hero = ({setActive}) => {
     bgRepeat="no-repeat" 
     bgPosition="bottom" 
     bgSize={{lg: "100%"}}
-    overflow={{xl: "hidden"}}
+    overflow="hidden"
     >
       <Flex 
       minH="270px"
@@ -66,11 +66,11 @@ const Hero = ({setActive}) => {
         align="center"
         zIndex={2}
         >
-          <Box 
+          <Box
           as={motion.div} 
           initial="hidden" 
           animate="visible" 
-          variants={slideIn("down", "", 0.5, 1, 150)} 
+          variants={slideIn("down", "", 0.5, 1, 150)}  
           boxSize="20px" 
           bg="brand.tertiary" 
           borderRadius="full" 
