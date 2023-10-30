@@ -1,6 +1,6 @@
 # Portfolio Project
 
-Welcome to my <a href="https://www.fcarvelli.com" target="_blank">portfolio</a> project!
+Welcome to my [portfolio](https://www.fcarvelli.com) project!
 
 ## Technologies
 
@@ -11,8 +11,8 @@ Welcome to my <a href="https://www.fcarvelli.com" target="_blank">portfolio</a> 
 
 ## Contact
 
-- **Email:**  <a href="mailto:fcarvelli.work@gmail.com" target="_blank">fcarvelli.work@gmail.com</a>
-- **LinkedIn:**  <a href="https://www.linkedin.com/in/fcarvelli/" target="_blank">www.linkedin.com/in/fcarvelli/</a>
-- **Website:**  <a href="https://www.fcarvelli.com" target="_blank">fcarvelli.com</a>
+- **Email:** fcarvelli.work@gmail.com
+- **LinkedIn:** [www.linkedin.com/in/fcarvelli/](https://www.linkedin.com/in/fcarvelli/)
+- **Website:** [fcarvelli.com](https://www.fcarvelli.com)
 
 Feel free to reach out if you have any questions or would like to collaborate on a project.
