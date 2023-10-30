@@ -1,8 +1,18 @@
-# React + Vite
+# Portfolio Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my [portfolio](https://www.fcarvelli.com) project!
 
-Currently, two official plugins are available:
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js
+- ChakraUI
+- Framer Motion
+- EmailJS
+
+## Contact
+
+- **Email:** fcarvelli.work@gmail.com
+- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/fcarvelli/)
+- **Website:** [Your Portfolio Website](https://www.fcarvelli.com)
+
+Feel free to reach out if you have any questions or would like to collaborate on a project.
