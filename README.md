@@ -4,10 +4,10 @@ Welcome to my [portfolio](https://www.fcarvelli.com) project!
 
 ## Technologies
 
-- React.js
-- ChakraUI
-- Framer Motion
-- EmailJS
+- **React.js**
+- **ChakraUI**
+- **Framer Motion**
+- **EmailJS**
 
 ## Contact
 
