@@ -19,13 +19,13 @@ const ProffessionCard = ({name, icon}) => {
     border="1px solid" 
     borderColor="brand.primary" 
     borderRadius="16px"
-    p={{base: "32px 96px", lg: "32px 28px"}}
+    p={{base: "32px 56px", lg: "32px 28px"}}
     boxShadow="0 0 36px 1.8px #FF000055"
     height="100%"
     >
       <CardBody p="0">
         <VStack rowGap="16px">
-          {<Icon boxSize="70%" as={icon} />}
+          {<Icon boxSize={{base: "50%", lg: "70%"}} as={icon} />}
           <Text 
           color="brand.white"
           fontSize={{base: "5vw", md: '2.5vw', lg: '1.3vw', '2xl': "1.1vw"}}
