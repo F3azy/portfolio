@@ -26,7 +26,7 @@ const ProjectCard = ({title, image, githubUrl, url, description, tags}) => {
     as={motion.div}
     variants={fadeIn("right", "spring", 1)}
     bg="brand.dark.600" 
-    borderRadius="16px"
+    borderRadius="20px"
     p="12px"
     height="100%"
     rowGap="12px"
