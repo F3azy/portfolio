@@ -1,10 +1,10 @@
-import { Box, Flex, Text, Heading, useMediaQuery } from '@chakra-ui/react';
+import { useEffect, useRef, useState } from 'react';
 import { HeroBG, HeroAnimation } from '../assets';
 import Lottie from 'react-lottie-player';
 import { motion } from 'framer-motion';
-import { slideIn, slideOut, zoomIn } from '../utils/motion';
-import { useEffect, useRef, useState } from 'react';
+import { slideIn, zoomIn } from '../utils/motion';
 import { useIsInViewport } from '../hooks/useIsInView';
+import { Box, Flex, Text, Heading, useMediaQuery } from '@chakra-ui/react';
 
 const Hero = ({setActive}) => {
   const [isLargerThan768, isLargerThan412] = useMediaQuery(['(min-width: 768px)', '(min-width: 412px)'], {ssr: false});

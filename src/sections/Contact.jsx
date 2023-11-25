@@ -9,10 +9,9 @@ import {
   useToast
 } from '@chakra-ui/react';
 import { sections } from '../constants';
-import SectionInfo from './SectionInfo';
+import {SectionInfo ,SectionWrapper} from '../components';
 import { useState } from 'react';
 import emailjs from "@emailjs/browser";
-import SectionWrapper from './SectionWrapper';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 import { useEffect, useRef } from 'react';

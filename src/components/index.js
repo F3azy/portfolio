@@ -1,7 +1,6 @@
 export { default as Sidebar } from './Sidebar';
 export { default as MobileNav } from './MobileNav';
-export { default as Hero } from './Hero';
-export { default as About } from './About';
-export { default as Tech } from './Tech';
-export { default as Projects } from './Projects';
-export { default as Contact } from './Contact';
+export { default as ProffessionCard } from './ProffessionCard';
+export { default as ProjectCard } from './ProjectCard';
+export { default as SectionInfo } from './SectionInfo';
+export { default as SectionWrapper } from './SectionWrapper';
