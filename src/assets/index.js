@@ -5,6 +5,7 @@ import movieInfo from './movieInfo.png';
 import pokeInfo from './pokeInfo.png';
 import portfolio from './portfolio.png';
 import logo from './logo.svg'
+import savio from './savio.png'
 
 export {
     HeroAnimation,
@@ -14,4 +15,5 @@ export {
     pokeInfo,
     portfolio,
     logo,
+    savio,
 };

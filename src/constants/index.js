@@ -1,5 +1,4 @@
 import {
-  siBlender,
   siBootstrap,
   siChakraui,
   siCplusplus,
@@ -16,13 +15,17 @@ import {
   siPython,
   siReact,
   siTypescript,
-  siUnity,
-  siVisualstudio,
   siVisualstudiocode,
   siYarn,
+  siTailwindcss,
+  siFramer,
+  siC,
+  siReactrouter,
+  siFirebase
+
 } from "simple-icons";
 
-import { FrontEndIcon, movieInfo, pokeInfo, portfolio } from "../assets";
+import { FrontEndIcon, movieInfo, pokeInfo, portfolio, savio } from "../assets";
 
 import { renderSimpleIcon } from "react-icon-cloud";
 
@@ -138,10 +141,12 @@ const icons = [
   siChakraui,
   siVisualstudiocode,
   siPhp,
-  siBlender,
-  siUnity,
   siPython,
   siGithub,
+  siTailwindcss,
+  siFramer,
+  siC,
+  siReactrouter,
 ];
 
 export const iconsCloud = icons.map((icon) => {
@@ -178,9 +183,26 @@ const tech = {
     name: "reactrouter",
     color: "#f44250",
   },
+  tailwind: {
+    name: "tailwind",
+    color: "#38bdf8",
+  },
+  framerMotion: {
+    name: "framermotion",
+    color: "#d2c",
+  },
 };
 
 export const projects = [
+  {
+    title: "Savio",
+    image: savio,
+    githubUrl: "https://github.com/F3azy/Savio",
+    url: "https://www.zespolmuzycznysavio.pl/",
+    description:
+      "This is a small website created for a music band located in Szczecin, Poland. (currently waiting for pictures and text for the page)",
+    tags: [tech.react, tech.tailwind, tech.reactRouter, tech.framerMotion],
+  },
   {
     title: "FCarvelli",
     image: portfolio,
@@ -188,7 +210,7 @@ export const projects = [
     url: "",
     description:
       "The page you are currently on. It shows my professions, technologies and all of my current projects.",
-    tags: [tech.react, tech.chakraUI],
+    tags: [tech.react, tech.chakraUI, tech.framerMotion],
   },
   {
     title: "Movie Info",
