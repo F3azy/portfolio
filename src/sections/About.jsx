@@ -1,6 +1,6 @@
 import useSetActiveSection from "../hooks/useSetActiveSection";
 import { SectionInfo, SectionWrapper } from "../components";
-import ProfessionList from "../components/ProfessionList";
+import { ProfessionList } from "../components";
 import { sections } from "../constants";
 
 const About = () => {

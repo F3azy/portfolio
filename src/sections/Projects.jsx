@@ -1,6 +1,6 @@
 import { sections } from "../constants";
 import { SectionInfo, SectionWrapper } from "../components";
-import ProjectList from "../components/ProjectList";
+import { ProjectList } from "../components";
 import useSetActiveSection from "../hooks/useSetActiveSection";
 
 const Projects = () => {

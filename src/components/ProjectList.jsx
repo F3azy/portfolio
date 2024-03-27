@@ -1,7 +1,6 @@
-import React from "react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { projects } from "../constants";
-import { ProjectCard } from "../components";
+import ProjectCard from "./ProjectCard";
 import { staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
 
