@@ -1,26 +1,13 @@
-import { useEffect, useRef } from "react";
-import { useIsInViewport } from "../hooks/useIsInView";
 import { sections } from "../constants";
 import { SectionInfo, SectionWrapper } from "../components";
-import { useActiveSection } from "../context/ActiveSectionContext";
 import TechCloud from "../components/TechCloud";
+import useSetActiveSection from "../hooks/useSetActiveSection";
 
 const Tech = () => {
-  const TechRef = useRef(null);
-  const isInViewPort = useIsInViewport(TechRef);
-
-  const { clicked, setActive } = useActiveSection();
-
-  useEffect(() => {
-    if (isInViewPort) if (!clicked && setActive) setActive("Technologies");
-  }, [isInViewPort]);
+  const ref = useSetActiveSection("Technologies");
 
   return (
-    <SectionWrapper
-      id="tech"
-      Ref={TechRef}
-      RowGap={{ base: "28px", xl: "8px" }}
-    >
+    <SectionWrapper id="tech" Ref={ref} RowGap={{ base: "28px", xl: "8px" }}>
       <SectionInfo infos={sections.get("tech")} animate={true} />
       <TechCloud />
     </SectionWrapper>

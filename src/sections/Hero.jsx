@@ -1,24 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HeroBG, HeroAnimation } from '../assets';
 import Lottie from 'react-lottie-player';
 import { motion } from 'framer-motion';
 import { slideIn, zoomIn } from '../utils/motion';
-import { useIsInViewport } from '../hooks/useIsInView';
 import { Box, Flex, Text, Heading, useMediaQuery } from '@chakra-ui/react';
-import { useActiveSection } from '../context/ActiveSectionContext';
+import useSetActiveSection from '../hooks/useSetActiveSection';
 
 const Hero = () => {
   const [isLargerThan768, isLargerThan412] = useMediaQuery(['(min-width: 768px)', '(min-width: 412px)'], {ssr: false});
   const [showBox, setShowBox] = useState(true);
 
-  const HeroRef = useRef(null);
-  const isInViewPort = useIsInViewport(HeroRef);
-
-  const {clicked, setActive} = useActiveSection();
-
-  useEffect(() => {
-    if(isInViewPort)  if(!clicked && setActive)  setActive("Hero");
-  }, [isInViewPort]);
+  const ref = useSetActiveSection("Hero");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -45,7 +37,7 @@ const Hero = () => {
   return (
     <Flex 
     id="hero"
-    ref={HeroRef}
+    ref={ref}
     direction="column"
     minH={{lg: "100vh"}} 
     p={{base: "48px 16px", md: "60px 16px", lg: "48px 94px"}} 

@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect  } from "react";
 
-export function useIsInViewport(ref) {
+export default function useIsInViewport(ref) {
     const [isIntersecting, setIsIntersecting] = useState(false);
 
     const observer = useMemo(
