@@ -5,13 +5,16 @@ import { SectionInfo, ProjectCard, SectionWrapper } from "../components";
 import { staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
 import { useIsInViewport } from "../hooks/useIsInView";
+import { useActiveSection } from "../context/ActiveSectionContext";
 
-const Projects = ({ setActive }) => {
+const Projects = () => {
   const ProjectsRef = useRef(null);
   const isInViewPort = useIsInViewport(ProjectsRef);
 
+  const {clicked, setActive} = useActiveSection();
+
   useEffect(() => {
-    if (isInViewPort) if (setActive) setActive("Projects");
+    if (isInViewPort) if (!clicked && setActive) setActive("Projects");
   }, [isInViewPort]);
 
   return (

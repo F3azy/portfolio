@@ -16,8 +16,9 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 import { useEffect, useRef } from 'react';
 import { useIsInViewport } from '../hooks/useIsInView';
+import { useActiveSection } from '../context/ActiveSectionContext';
 
-const Contact = ({setActive}) => {
+const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast()
   const [form, setForm] = useState({
@@ -30,8 +31,10 @@ const Contact = ({setActive}) => {
   const ContactRef = useRef(null);
   const isInViewPort = useIsInViewport(ContactRef);
 
+  const {clicked, setActive} = useActiveSection();
+
   useEffect(() => {
-    if(isInViewPort) if(setActive) setActive("Contact");
+    if(isInViewPort) if(!clicked && setActive) setActive("Contact");
   }, [isInViewPort]);
 
   useEffect(() => {

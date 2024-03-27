@@ -6,13 +6,16 @@ import { sections, iconsCloud, cloudOptions } from "../constants";
 import { SectionInfo, SectionWrapper } from "../components";
 import { Cloud } from "react-icon-cloud";
 import { zoomIn } from "../utils/motion";
+import { useActiveSection } from "../context/ActiveSectionContext";
 
-const Tech = ({ setActive }) => {
+const Tech = () => {
   const TechRef = useRef(null);
   const isInViewPort = useIsInViewport(TechRef);
 
+  const {clicked, setActive} = useActiveSection();
+
   useEffect(() => {
-    if (isInViewPort) if (setActive) setActive("Technologies");
+    if (isInViewPort) if (!clicked && setActive) setActive("Technologies");
   }, [isInViewPort]);
 
   return (

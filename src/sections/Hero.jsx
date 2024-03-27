@@ -5,16 +5,19 @@ import { motion } from 'framer-motion';
 import { slideIn, zoomIn } from '../utils/motion';
 import { useIsInViewport } from '../hooks/useIsInView';
 import { Box, Flex, Text, Heading, useMediaQuery } from '@chakra-ui/react';
+import { useActiveSection } from '../context/ActiveSectionContext';
 
-const Hero = ({setActive}) => {
+const Hero = () => {
   const [isLargerThan768, isLargerThan412] = useMediaQuery(['(min-width: 768px)', '(min-width: 412px)'], {ssr: false});
   const [showBox, setShowBox] = useState(true);
 
   const HeroRef = useRef(null);
   const isInViewPort = useIsInViewport(HeroRef);
 
+  const {clicked, setActive} = useActiveSection();
+
   useEffect(() => {
-    if(isInViewPort)  if(setActive)  setActive("Hero");
+    if(isInViewPort)  if(!clicked && setActive)  setActive("Hero");
   }, [isInViewPort]);
 
   useEffect(() => {

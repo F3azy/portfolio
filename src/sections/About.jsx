@@ -5,13 +5,16 @@ import { motion } from "framer-motion";
 import { professions, sections } from "../constants";
 import { staggerContainer } from "../utils/motion";
 import { SectionInfo, ProffessionCard, SectionWrapper } from "../components";
+import { useActiveSection } from "../context/ActiveSectionContext";
 
-const About = ({ setActive }) => {
+const About = () => {
   const AboutRef = useRef(null);
   const isInViewPort = useIsInViewport(AboutRef);
 
+  const {clicked, setActive} = useActiveSection();
+
   useEffect(() => {
-    if (isInViewPort) if (setActive) setActive("About");
+    if (isInViewPort) if (!clicked && setActive) setActive("About");
   }, [isInViewPort]);
 
   return (
