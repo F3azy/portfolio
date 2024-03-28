@@ -18,7 +18,7 @@ const ProfessionCard = ({ name, icon }) => {
     >
       <CardBody p="0">
         <VStack rowGap="16px">
-          {<Icon boxSize={{ base: "50%", lg: "70%" }} as={icon} />}
+          <Icon boxSize={{ base: "50%", lg: "70%" }} as={icon} />
           <Text
             color="brand.white"
             fontSize={{ base: "5vw", md: "2.5vw", lg: "1.3vw", "2xl": "1.1vw" }}
