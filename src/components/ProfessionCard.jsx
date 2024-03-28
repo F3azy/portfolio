@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Card, CardBody, Icon, VStack, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";

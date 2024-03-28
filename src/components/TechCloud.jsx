@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import { Flex } from "@chakra-ui/react";
 import { iconsCloud, cloudOptions } from "../constants";

@@ -1,6 +1,5 @@
 import { sections } from "../constants";
-import { SectionInfo, SectionWrapper } from "../components";
-import TechCloud from "../components/TechCloud";
+import { SectionInfo, SectionWrapper, TechCloud } from "../components";
 import useSetActiveSection from "../hooks/useSetActiveSection";
 
 const Tech = () => {

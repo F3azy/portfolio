@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 
 const SectionWrapper = forwardRef(function SectionWrapper(props, ref) {
   const { children } = props;
