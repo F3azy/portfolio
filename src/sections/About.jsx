@@ -4,7 +4,7 @@ import { ProfessionList } from "../components";
 import { sections } from "../constants";
 
 const About = () => {
-  const ref = useSetActiveSection("About");
+  const ref = useSetActiveSection("about");
 
   return (
     <SectionWrapper id="about" ref={ref}>

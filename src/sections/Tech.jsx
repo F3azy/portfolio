@@ -4,7 +4,7 @@ import TechCloud from "../components/TechCloud";
 import useSetActiveSection from "../hooks/useSetActiveSection";
 
 const Tech = () => {
-  const ref = useSetActiveSection("Technologies");
+  const ref = useSetActiveSection("tech");
 
   return (
     <SectionWrapper id="tech" ref={ref}>

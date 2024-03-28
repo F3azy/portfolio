@@ -4,7 +4,7 @@ import { ProjectList } from "../components";
 import useSetActiveSection from "../hooks/useSetActiveSection";
 
 const Projects = () => {
-  const ref = useSetActiveSection("Projects");
+  const ref = useSetActiveSection("projects");
 
   return (
     <SectionWrapper id="projects" ref={ref}>

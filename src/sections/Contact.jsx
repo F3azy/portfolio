@@ -29,7 +29,7 @@ const Contact = () => {
     !(form.name && form.email && form.message)
   );
 
-  const ref = useSetActiveSection("Contact");
+  const ref = useSetActiveSection("contact");
 
   useEffect(() => {
     setIsSubmitDisabled(!(form.name && form.email && form.message));

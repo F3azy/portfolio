@@ -10,7 +10,7 @@ const Hero = () => {
   const [isLargerThan768, isLargerThan412] = useMediaQuery(['(min-width: 768px)', '(min-width: 412px)'], {ssr: false});
   const [showBox, setShowBox] = useState(true);
 
-  const ref = useSetActiveSection("Hero");
+  const ref = useSetActiveSection("hero");
 
   useEffect(() => {
     const timer = setTimeout(() => {

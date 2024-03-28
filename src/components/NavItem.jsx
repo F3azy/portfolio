@@ -37,7 +37,7 @@ const NavItem = ({id, title, icon, active, setActive, onClose, setClicked}) => {
             href={`#${id}`} 
             onClick={() => 
               {
-                setActive(title); 
+                setActive(id); 
                 if(onClose)onClose(); 
                 setClicked(true); 
                 setTimeout(() => setClicked(false), 600);
@@ -60,9 +60,9 @@ const NavItem = ({id, title, icon, active, setActive, onClose, setClicked}) => {
               >
                   <Center 
                   boxSize={{base: "48px", md: "60px", lg: "48px"}}
-                  bg={(active==title) ? "brand.secondary" : "brand.dark.700"}
-                  borderRadius={(active==title) ? "16px" : "24px"} 
-                  color={(active==title) ? "brand.white" : "brand.primary"}
+                  bg={(active==id) ? "brand.secondary" : "brand.dark.700"}
+                  borderRadius={(active==id) ? "16px" : "24px"} 
+                  color={(active==id) ? "brand.white" : "brand.primary"}
                   transition="border-radius 0.15s linear, background 0.2s linear, color 0.2s linear"
                   _groupHover={{ 
                     borderRadius: "16px",
@@ -81,7 +81,7 @@ const NavItem = ({id, title, icon, active, setActive, onClose, setClicked}) => {
               fontSize={{base: "20px", md: "28px"}}
               fontWeight="bold"
               color="brand.primary"
-              textDecoration={(active==title) ? "underline" : "none"}
+              textDecoration={(active==id) ? "underline" : "none"}
               _groupHover={{
                 textDecoration: "underline",
               }}
@@ -91,7 +91,7 @@ const NavItem = ({id, title, icon, active, setActive, onClose, setClicked}) => {
             </Center>
             <Box 
             w="8px" 
-            h={(active==title) ? "40px" : isHovering ? "20px" : "8px"} 
+            h={(active==id) ? "40px" : isHovering ? "20px" : "8px"} 
             bg="brand.white" 
             borderRadius="full" 
             position="absolute" 
