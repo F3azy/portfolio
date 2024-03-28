@@ -17,11 +17,8 @@ import NavItem from "./NavItem";
 import SocialLink from "./SocialLink";
 import { useLayoutEffect } from "react";
 import { logo } from "../assets";
-import { useActiveSection } from "../context/ActiveSectionContext";
 
 const MobileNav = () => {
-  const { active, setActive, setClicked } = useActiveSection();
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useLayoutEffect(() => {
@@ -99,9 +96,6 @@ const MobileNav = () => {
                     id={navLink.id}
                     title={navLink.title}
                     icon={navLink.icon}
-                    active={active}
-                    setActive={setActive}
-                    setClicked={setClicked}
                     onClose={onClose}
                   />
                 ))}

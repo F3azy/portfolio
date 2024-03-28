@@ -4,11 +4,8 @@ import NavItem from "./NavItem";
 import SocialLink from "./SocialLink";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
-import { useActiveSection } from "../context/ActiveSectionContext";
 
 const Sidebar = () => {
-  const { active, setActive, setClicked } = useActiveSection();
-
   return (
     <Flex
       as={motion.div}
@@ -40,9 +37,6 @@ const Sidebar = () => {
             id={navLink.id}
             title={navLink.title}
             icon={navLink.icon}
-            active={active}
-            setActive={setActive}
-            setClicked={setClicked}
           />
         ))}
       </Flex>
