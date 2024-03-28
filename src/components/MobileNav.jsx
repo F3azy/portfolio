@@ -12,11 +12,10 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { BiMenu } from "react-icons/bi";
-import { navLinks, socialLinks } from "../constants";
-import NavItem from "./NavItem";
-import SocialLink from "./SocialLink";
 import { useLayoutEffect } from "react";
 import { logo } from "../assets";
+import SocialLinkList from "./SocialLinkList";
+import NavItemList from "./NavItemList";
 
 const MobileNav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -90,28 +89,13 @@ const MobileNav = () => {
                 direction="column"
                 rowGap={{ base: "24px", md: "40px" }}
               >
-                {navLinks.map((navLink) => (
-                  <NavItem
-                    key={navLink.id}
-                    id={navLink.id}
-                    title={navLink.title}
-                    icon={navLink.icon}
-                    onClose={onClose}
-                  />
-                ))}
+                <NavItemList />
               </Flex>
               <Flex
                 justifyContent="center"
                 columnGap={{ base: "40px", md: "60px" }}
               >
-                {socialLinks.map((socialLink) => (
-                  <SocialLink
-                    key={socialLink.id}
-                    icon={socialLink.icon}
-                    url={socialLink.url}
-                    onClose={onClose}
-                  />
-                ))}
+                <SocialLinkList />
               </Flex>
             </Flex>
           </DrawerBody>

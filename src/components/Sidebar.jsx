@@ -1,9 +1,9 @@
 import { Flex } from "@chakra-ui/react";
-import { navLinks, socialLinks } from "../constants";
-import NavItem from "./NavItem";
-import SocialLink from "./SocialLink";
+
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
+import NavItemList from "./NavItemList";
+import SocialLinkList from "./SocialLinkList";
 
 const Sidebar = () => {
   return (
@@ -31,14 +31,7 @@ const Sidebar = () => {
         direction="column"
         rowGap="12px"
       >
-        {navLinks.map((navLink) => (
-          <NavItem
-            key={navLink.id}
-            id={navLink.id}
-            title={navLink.title}
-            icon={navLink.icon}
-          />
-        ))}
+        <NavItemList />
       </Flex>
       <Flex
         as={motion.div}
@@ -49,13 +42,7 @@ const Sidebar = () => {
         direction="column"
         rowGap="12px"
       >
-        {socialLinks.map((socialLink) => (
-          <SocialLink
-            key={socialLink.id}
-            icon={socialLink.icon}
-            url={socialLink.url}
-          />
-        ))}
+        <SocialLinkList />
       </Flex>
     </Flex>
   );
