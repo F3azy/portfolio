@@ -1,20 +1,10 @@
-import { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
+import useHideAfterTime from "../hooks/useHideAfterTime";
 
 const HeroHideTextBox = ({ offset }) => {
-  const [showBox, setShowBox] = useState(true);
+  const show = useHideAfterTime(2500);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowBox(false);
-    }, 2500);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
-  if (showBox)
+  if (show)
     return (
       <Box
         bg="brand.dark.700"
