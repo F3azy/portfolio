@@ -21,14 +21,7 @@ const ProjectList = () => {
     >
       {projects.map((project) => (
         <GridItem key={project.title}>
-          <ProjectCard
-            title={project.title}
-            image={project.image}
-            githubUrl={project.githubUrl}
-            url={project.url}
-            description={project.description}
-            tags={project.tags}
-          />
+          <ProjectCard project={project} />
         </GridItem>
       ))}
     </Grid>
