@@ -147,6 +147,7 @@ const icons = [
   siFramer,
   siC,
   siReactrouter,
+  siFirebase,
 ];
 
 export const iconsCloud = icons.map((icon) => {
