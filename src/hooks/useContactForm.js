@@ -4,7 +4,6 @@ import { useToast } from "@chakra-ui/react";
 
 const toastOptions = {
   position: "top",
-  status: "success",
   duration: 9000,
   isClosable: true,
 };
@@ -76,6 +75,7 @@ export default function useContactForm() {
           toast({
             title: "Email sent.",
             description: "Thank you, I will responde as soon as possible.",
+            status: "success",
             ...toastOptions,
           });
 
@@ -93,6 +93,7 @@ export default function useContactForm() {
             title: "Something went wrong.",
             description:
               "Try again or just send me an e-mail to this adress: fcarvelli.work@gmail.com.",
+              status: "error",
             ...toastOptions,
           });
         }
