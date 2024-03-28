@@ -7,7 +7,7 @@ const Tech = () => {
   const ref = useSetActiveSection("Technologies");
 
   return (
-    <SectionWrapper id="tech" Ref={ref} RowGap={{ base: "28px", xl: "8px" }}>
+    <SectionWrapper id="tech" innerRef={ref}>
       <SectionInfo infos={sections.get("tech")} animate={true} />
       <TechCloud />
     </SectionWrapper>
