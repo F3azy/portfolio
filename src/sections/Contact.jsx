@@ -113,7 +113,7 @@ const Contact = () => {
   }
 
   return (
-    <SectionWrapper id="contact" innerRef={ref}>
+    <SectionWrapper id="contact" ref={ref}>
       <Flex
         as={motion.div}
         initial="hidden"

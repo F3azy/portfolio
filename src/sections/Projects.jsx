@@ -7,7 +7,7 @@ const Projects = () => {
   const ref = useSetActiveSection("Projects");
 
   return (
-    <SectionWrapper id="projects" innerRef={ref}>
+    <SectionWrapper id="projects" ref={ref}>
       <SectionInfo infos={sections.get("project")} animate={true} />
       <ProjectList />
     </SectionWrapper>

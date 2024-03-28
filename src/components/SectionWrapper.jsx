@@ -1,15 +1,15 @@
 import { Flex } from "@chakra-ui/react";
-import React from "react";
+import React, { forwardRef } from "react";
 
-const SectionWrapper = (props) => {
-  const { children, innerRef } = props;
+const SectionWrapper = forwardRef(function SectionWrapper(props, ref) {
+  const { children } = props;
 
   return (
     <Flex
       {...props}
-      ref={innerRef}
+      ref={ref}
       direction="column"
-      rowGap={{base: "44px", xl: "88px"}}
+      rowGap={{ base: "44px", xl: "88px" }}
       justify="center"
       minH={{ lg: "100vh" }}
       p={{ base: "48px 0", md: "60px 0", xl: "40px 0" }}
@@ -18,6 +18,6 @@ const SectionWrapper = (props) => {
       {children}
     </Flex>
   );
-};
+});
 
 export default SectionWrapper;
