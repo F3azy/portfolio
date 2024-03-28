@@ -84,19 +84,16 @@ const MobileNav = () => {
               p="16px 0"
               display={{ base: "flex", lg: "none" }}
             >
-              <Flex
+              <NavItemList
                 as="nav"
                 direction="column"
                 rowGap={{ base: "24px", md: "40px" }}
-              >
-                <NavItemList />
-              </Flex>
-              <Flex
+              />
+
+              <SocialLinkList
                 justifyContent="center"
                 columnGap={{ base: "40px", md: "60px" }}
-              >
-                <SocialLinkList />
-              </Flex>
+              />
             </Flex>
           </DrawerBody>
         </DrawerContent>

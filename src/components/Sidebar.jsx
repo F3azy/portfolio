@@ -1,5 +1,4 @@
 import { Flex } from "@chakra-ui/react";
-
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
 import NavItemList from "./NavItemList";
@@ -22,7 +21,7 @@ const Sidebar = () => {
       zIndex={10}
       display={{ base: "none", lg: "flex" }}
     >
-      <Flex
+      <NavItemList
         as={motion.nav}
         initial="hidden"
         whileInView="visible"
@@ -30,10 +29,9 @@ const Sidebar = () => {
         variants={staggerContainer(0.4, 0.75)}
         direction="column"
         rowGap="12px"
-      >
-        <NavItemList />
-      </Flex>
-      <Flex
+      />
+
+      <SocialLinkList
         as={motion.div}
         initial="hidden"
         whileInView="visible"
@@ -41,9 +39,7 @@ const Sidebar = () => {
         variants={staggerContainer(0.4, 0.75, -1)}
         direction="column"
         rowGap="12px"
-      >
-        <SocialLinkList />
-      </Flex>
+      />
     </Flex>
   );
 };
