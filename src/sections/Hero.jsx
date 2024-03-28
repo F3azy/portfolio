@@ -1,8 +1,7 @@
 import { HeroBG } from "../assets";
 import { Flex } from "@chakra-ui/react";
 import useSetActiveSection from "../hooks/useSetActiveSection";
-import HeroGif from "../components/HeroGif";
-import HeroTitle from "../components/HeroTitle";
+import { HeroGif, HeroTitle } from "../components";
 
 const Hero = () => {
   const ref = useSetActiveSection("hero");

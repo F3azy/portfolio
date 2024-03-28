@@ -1,10 +1,9 @@
 import { Flex } from "@chakra-ui/react";
 import { sections } from "../constants";
-import { SectionInfo, SectionWrapper } from "../components";
+import { SectionInfo, SectionWrapper, ContactForm } from "../components";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import useSetActiveSection from "../hooks/useSetActiveSection";
-import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
   const ref = useSetActiveSection("contact");
