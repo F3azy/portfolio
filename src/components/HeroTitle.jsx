@@ -1,10 +1,27 @@
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion";
-import { Box, Flex, Text, Heading } from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, useMediaQuery } from "@chakra-ui/react";
 import HeroTitleLine from "./HeroTitleLine";
 import HeroHideTextBox from "./HeroHideTextBox";
 
 const HeroTitle = () => {
+  const [isLargerThan768, isLargerThan412] = useMediaQuery(
+    ["(min-width: 768px)", "(min-width: 412px)"],
+    { ssr: false }
+  );
+
+  function getSlideOffset() {
+    if (isLargerThan768) {
+      return 600;
+    }
+
+    if (isLargerThan412) {
+      return 360;
+    }
+
+    return 315;
+  }
+
   return (
     <Flex
       minH="270px"
@@ -15,7 +32,7 @@ const HeroTitle = () => {
     >
       <HeroTitleLine />
       <Box h="min-content" position="relative">
-        <HeroHideTextBox />
+        <HeroHideTextBox offset={getSlideOffset()} />
         <Box
           as={motion.div}
           initial="hidden"
