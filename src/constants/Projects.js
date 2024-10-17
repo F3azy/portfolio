@@ -1,4 +1,4 @@
-import { movieInfo, pokeInfo, portfolio, savio } from "../assets";
+import { hemera, movieInfo, pokeInfo, portfolio, savio } from "../assets";
 
 const tech = {
   react: {
@@ -24,6 +24,15 @@ const tech = {
 };
 
 export const projects = [
+  {
+    title: "Hemera",
+    image: hemera,
+    githubUrl: "https://github.com/F3azy/hemera",
+    url: "https://hemera-six.vercel.app/",
+    description:
+      "This is a small website created for a film productio company located in Szczecin, Poland.",
+    tags: [tech.react, tech.tailwind],
+  },
   {
     title: "Savio",
     image: savio,

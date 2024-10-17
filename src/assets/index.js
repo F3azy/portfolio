@@ -6,6 +6,7 @@ import pokeInfo from './pokeInfo.png';
 import portfolio from './portfolio.png';
 import logo from './logo.svg'
 import savio from './savio.png'
+import hemera from './hemera.png'
 
 export {
     HeroAnimation,
@@ -16,4 +17,5 @@ export {
     portfolio,
     logo,
     savio,
+    hemera,
 };
