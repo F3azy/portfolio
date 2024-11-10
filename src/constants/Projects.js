@@ -28,7 +28,7 @@ export const projects = [
     title: "Hemera",
     image: hemera,
     githubUrl: "https://github.com/F3azy/hemera",
-    url: "https://hemera-six.vercel.app/",
+    url: "http://www.hemerastudios.pl/",
     description:
       "This is a small website created for a film productio company located in Szczecin, Poland.",
     tags: [tech.react, tech.tailwind],
