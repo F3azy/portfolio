@@ -24,24 +24,15 @@ const tech = {
 };
 
 export const projects = [
-  {
-    title: "Hemera",
-    image: hemera,
-    githubUrl: "https://github.com/F3azy/hemera",
-    url: "http://www.hemerastudios.pl/",
-    description:
-      "This is a small website created for a film productio company located in Szczecin, Poland.",
-    tags: [tech.react, tech.tailwind],
-  },
-  {
-    title: "Savio",
-    image: savio,
-    githubUrl: "https://github.com/F3azy/Savio",
-    url: "https://www.zespolmuzycznysavio.pl/",
-    description:
-      "This is a small website created for a music band located in Szczecin, Poland. (currently waiting for pictures and text for the page)",
-    tags: [tech.react, tech.tailwind, tech.reactRouter, tech.framerMotion],
-  },
+  // {
+  //   title: "Hemera",
+  //   image: hemera,
+  //   githubUrl: "https://github.com/F3azy/hemera",
+  //   url: "http://www.hemerastudios.pl/",
+  //   description:
+  //     "This is a small website created for a film productio company located in Szczecin, Poland.",
+  //   tags: [tech.react, tech.tailwind],
+  // },
   {
     title: "FCarvelli",
     image: portfolio,
