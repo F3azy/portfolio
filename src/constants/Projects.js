@@ -30,7 +30,7 @@ export const projects = [
     githubUrl: "https://github.com/F3azy/WriteMentor",
     url: "https://write-mentor.vercel.app/",
     description:
-      "A web app to build writing skills in your chosen language.",
+      "A web app designed to help you improve your writing and typing skills in the language of your choice through real-world typing practice.",
     tags: [tech.react, tech.tailwind],
   },
   {
