@@ -5,7 +5,7 @@ import movieInfo from './movieInfo.png';
 import pokeInfo from './pokeInfo.png';
 import portfolio from './portfolio.png';
 import logo from './logo.svg'
-import writementor from './writementor.png'
+import writeMentor from './writeMentor.png'
 
 export {
     HeroAnimation,
@@ -15,5 +15,5 @@ export {
     pokeInfo,
     portfolio,
     logo,
-    writementor
+    writeMentor
 };
