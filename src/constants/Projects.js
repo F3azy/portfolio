@@ -1,4 +1,4 @@
-import { hemera, movieInfo, pokeInfo, portfolio, savio } from "../assets";
+import { movieInfo, pokeInfo, portfolio, writementor } from "../assets";
 
 const tech = {
   react: {
@@ -24,15 +24,15 @@ const tech = {
 };
 
 export const projects = [
-  // {
-  //   title: "Hemera",
-  //   image: hemera,
-  //   githubUrl: "https://github.com/F3azy/hemera",
-  //   url: "http://www.hemerastudios.pl/",
-  //   description:
-  //     "This is a small website created for a film productio company located in Szczecin, Poland.",
-  //   tags: [tech.react, tech.tailwind],
-  // },
+  {
+    title: "Write Mentor",
+    image: writementor,
+    githubUrl: "https://github.com/F3azy/WriteMentor",
+    url: "https://write-mentor.vercel.app/",
+    description:
+      "A web app to build writing skills in your chosen language.",
+    tags: [tech.react, tech.tailwind],
+  },
   {
     title: "FCarvelli",
     image: portfolio,
