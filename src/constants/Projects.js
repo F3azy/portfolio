@@ -1,4 +1,4 @@
-import { movieInfo, pokeInfo, portfolio, writementor } from "../assets";
+import { movieInfo, pokeInfo, portfolio, writeMentor } from "../assets";
 
 const tech = {
   react: {
@@ -26,7 +26,7 @@ const tech = {
 export const projects = [
   {
     title: "Write Mentor",
-    image: writementor,
+    image: writeMentor,
     githubUrl: "https://github.com/F3azy/WriteMentor",
     url: "https://write-mentor.vercel.app/",
     description:
